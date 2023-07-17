@@ -34,8 +34,7 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels {
         // Functions
 
         private void SignIn(object? param) {
-            MessageBox.Show(Email);
-            MessageBox.Show(Password);
+            
         }
 
     }

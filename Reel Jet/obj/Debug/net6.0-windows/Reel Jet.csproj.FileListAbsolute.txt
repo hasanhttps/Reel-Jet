@@ -6,9 +6,7 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet.csproj.AssemblyReference.cache
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\ResourceDictionaries\AnimatedTextBlockRD.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\ResourceDictionaries\CustomButtonRD.baml
-C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\ResourceDictionaries\CustomFontRD.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\ResourceDictionaries\ImageKeysRD.baml
-C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\CustomTextBox.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MainView.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\MovieListPage.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\MoviePreviewPage.g.cs
@@ -22,7 +20,6 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Generated
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet_MarkupCompile.cache
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet_MarkupCompile.lref
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\App.baml
-C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\CustomTextBox.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MainView.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\MovieListPage.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\MoviePreviewPage.baml

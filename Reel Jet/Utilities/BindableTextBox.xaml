@@ -18,7 +18,6 @@
             VerticalContentAlignment="Center"
             materialDesign:HintAssist.Hint="{Binding ElementName=control, Path=PlaceHolder}"
             materialDesign:HintAssist.Foreground="White"
-            materialDesign:HintAssist.FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"
             materialDesign:TextFieldAssist.UnderlineBrush="Red"
             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
             VerticalAlignment="Center"/>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\App.xaml
-161975406073
+142064802001
 
-271986582130
+26-1456144399
 205-1106294816
-ResourceDictionaries\AnimatedTextBlockRD.xaml;ResourceDictionaries\CustomButtonRD.xaml;ResourceDictionaries\CustomFontRD.xaml;ResourceDictionaries\ImageKeysRD.xaml;Utilities\BindableTextBox.xaml;Utilities\CustomPasswordBox.xaml;Utilities\CustomTextBox.xaml;Utilities\SearchBox.xaml;Views\MainView.xaml;Views\MoviePages\MovieListPage.xaml;Views\MoviePages\MoviePreviewPage.xaml;Views\NavigationBarPages\HistoryPage.xaml;Views\NavigationBarPages\WatchListPage.xaml;Views\RegistrationPages\LoadingPage.xaml;Views\RegistrationPages\LoginPage.xaml;Views\RegistrationPages\SignupPage.xaml;
+ResourceDictionaries\AnimatedTextBlockRD.xaml;ResourceDictionaries\CustomButtonRD.xaml;ResourceDictionaries\ImageKeysRD.xaml;Utilities\BindableTextBox.xaml;Utilities\CustomPasswordBox.xaml;Utilities\SearchBox.xaml;Views\MainView.xaml;Views\MoviePages\MovieListPage.xaml;Views\MoviePages\MoviePreviewPage.xaml;Views\NavigationBarPages\HistoryPage.xaml;Views\NavigationBarPages\WatchListPage.xaml;Views\RegistrationPages\LoadingPage.xaml;Views\RegistrationPages\LoginPage.xaml;Views\RegistrationPages\SignupPage.xaml;
 
 False
 

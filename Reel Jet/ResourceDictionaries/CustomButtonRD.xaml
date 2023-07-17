@@ -7,7 +7,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-
                         <Border x:Name="buttonborder" Background="#ed1c24" CornerRadius="2">
                         </Border>
                         <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>

@@ -8,4 +8,5 @@
     <BitmapImage x:Key="HistoryPageImg" UriSource="\Static Files\Images\history.png"/>
     <BitmapImage x:Key="SettingsPageImg" UriSource="\Static Files\Images\cog.png"/>
     <BitmapImage x:Key="MaleUserProfileImg" UriSource="\Static Files\Images\MaleUserProfile.png"/>
+    <BitmapImage x:Key="MovieImg" UriSource="\Static Files\Images\MovieIcon.png"/>
 </ResourceDictionary>

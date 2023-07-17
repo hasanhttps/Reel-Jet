@@ -69,7 +69,7 @@ namespace Reel_Jet.Utilities {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Reel Jet;component/utilities/customtextbox.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Reel Jet;V1.0.0.0;component/utilities/customtextbox.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Utilities\CustomTextBox.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

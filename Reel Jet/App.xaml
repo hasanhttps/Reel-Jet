@@ -7,7 +7,6 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ResourceDictionaries/ImageKeysRD.xaml"/>
-                <ResourceDictionary Source="ResourceDictionaries/CustomFontRD.xaml"/>
                 <ResourceDictionary Source="ResourceDictionaries/AnimatedTextBlockRD.xaml"/>
                 <ResourceDictionary Source="ResourceDictionaries/CustomButtonRD.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />

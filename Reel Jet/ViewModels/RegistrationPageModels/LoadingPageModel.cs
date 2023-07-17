@@ -17,7 +17,7 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels {
             MainFrame = frame;
 
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(6.2);
+            timer.Interval = TimeSpan.FromSeconds(6.22);
             timer.Tick += Timer_Tick;
             timer.Start();
         }

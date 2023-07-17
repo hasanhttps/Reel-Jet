@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using Reel_Jet.Views.RegistrationPages;
 using Reel_Jet.Views.MoviePages;
+using Reel_Jet.Views.NavigationBarPages;
 
 namespace Reel_Jet.ViewModels {
     public class MainViewModel {
         private Frame MainFrame;
         public MainViewModel(Frame frame) { 
             MainFrame = frame;
-            MainFrame.Content = new LoadingPage(MainFrame);
+            MainFrame.Content = new LoadingPage(frame);
         }
 
     }

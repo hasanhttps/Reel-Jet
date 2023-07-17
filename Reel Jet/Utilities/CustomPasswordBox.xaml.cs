@@ -13,22 +13,34 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace Reel_Jet.Utilities {
     public partial class CustomPasswordBox : UserControl {
         public CustomPasswordBox() {
             InitializeComponent();
         }
 
+        public string PlaceHolder {
+            get { return (string)GetValue(PlaceHolderProperty); }
+            set { SetValue(PlaceHolderProperty, value); }
+        }
+        public string Password {
+            get { return (string)GetValue(PasswordProperty); }
+            set { SetValue(PasswordProperty, value); }
+        }
+
+
+        // Using a DependencyProperty as the backing store for PlaceHolder.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty PlaceHolderProperty =
+            DependencyProperty.Register("PlaceHolder", typeof(string), typeof(CustomPasswordBox));
+
         private bool _isPasswordChanging;
-
-
 
         public static readonly DependencyProperty PasswordProperty =
             DependencyProperty.Register("Password", typeof(string), typeof(CustomPasswordBox),
                 new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault,
                     PasswordPropertyChanged, null, false, UpdateSourceTrigger.PropertyChanged));
-
-
 
         private static void PasswordPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
             if (d is CustomPasswordBox passwordBox) {
@@ -36,26 +48,14 @@ namespace Reel_Jet.Utilities {
             }
         }
 
-
-
-        public string Password {
-            get { return (string)GetValue(PasswordProperty); }
-            set { SetValue(PasswordProperty, value); }
-        }
-
-        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
-        {
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e) {
             _isPasswordChanging = true;
             Password = passwordBox.Password;
             _isPasswordChanging = false;
         }
 
-
-
-        private void UpdatePassword()
-        {
-            if (!_isPasswordChanging)
-            {
+        private void UpdatePassword() {
+            if (!_isPasswordChanging) {
                 passwordBox.Password = Password;
             }
         }
