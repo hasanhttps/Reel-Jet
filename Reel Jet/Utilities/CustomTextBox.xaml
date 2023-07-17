@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Reel_Jet.Utilities.CustomTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Reel_Jet.Utilities"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Name="control">
+    <Grid>
+        <TextBlock Padding="2" Text="{Binding ElementName=control, Path=PlaceHolder}" Foreground="#6B6B77" VerticalAlignment="Center">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=txtBox, Path=Text}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox Padding="0 4 0 2" x:Name="txtBox"
+                 Background="Transparent"
+                 Foreground="White"
+                 BorderThickness="0"
+                 BorderBrush="Transparent"
+                 CaretBrush="White">
+            <TextBox.Style>
+                <Style>
+                    <Style.Triggers>
+                        
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Line VerticalAlignment="Bottom" Stroke="{Binding ElementName=control, Path=BorderBrush}" StrokeThickness="1" X1="0" X2="280"></Line>
+        <Line x:Name="animationLine" Stroke="Blue" StrokeThickness="1" X1="0"/>
+    </Grid>
+</UserControl>

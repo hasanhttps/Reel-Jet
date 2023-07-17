@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Reel_Jet</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Static Files\Fonts\QuickSand\Quicksand-Bold.ttf" />
+    <None Remove="Static Files\Fonts\QuickSand\Quicksand-Light.ttf" />
+    <None Remove="Static Files\Fonts\QuickSand\Quicksand-Medium.ttf" />
+    <None Remove="Static Files\Fonts\QuickSand\Quicksand-Regular.ttf" />
+    <None Remove="Static Files\Fonts\QuickSand\Quicksand-SemiBold.ttf" />
+    <None Remove="Static Files\Fonts\Sonny Gothic\SonnyGothic-UltraBlack.ttf" />
+    <None Remove="Static Files\Images\imdb_top_250.jpg" />
+    <None Remove="Static Files\Images\LoadingImage.jpg" />
+    <None Remove="Static Files\Images\ReelJet Logo 1.png" />
+    <None Remove="Static Files\Images\SignUp Logo.jpg" />
+    <None Remove="Views\movie %281%29.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Static Files\Fonts\QuickSand\Quicksand-Bold.ttf" />
+    <Resource Include="Static Files\Fonts\QuickSand\Quicksand-Light.ttf" />
+    <Resource Include="Static Files\Fonts\QuickSand\Quicksand-Medium.ttf" />
+    <Resource Include="Static Files\Fonts\QuickSand\Quicksand-Regular.ttf" />
+    <Resource Include="Static Files\Fonts\QuickSand\Quicksand-SemiBold.ttf" />
+    <Resource Include="Static Files\Fonts\Sonny Gothic\SonnyGothic-UltraBlack.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Static Files\Images\imdb_top_250.jpg" />
+    <Resource Include="Static Files\Images\LoadingImage.jpg" />
+    <Resource Include="Static Files\Images\ReelJet Logo 1.png" />
+    <Resource Include="Static Files\Images\SignUp Logo.jpg" />
+    <Resource Include="Views\movie (1).ico" />
+  </ItemGroup>
+
+</Project>
