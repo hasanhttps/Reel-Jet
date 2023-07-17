@@ -7,12 +7,24 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Utilities\CustomPasswordBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Utilities\SearchBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Utilities\BindableTextBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Utilities\CustomPasswordBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Utilities\SearchBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Utilities\BindableTextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

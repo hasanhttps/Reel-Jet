@@ -26,15 +26,7 @@
                  BorderThickness="0"
                  BorderBrush="Transparent"
                  CaretBrush="White">
-            <TextBox.Style>
-                <Style>
-                    <Style.Triggers>
-                        
-                    </Style.Triggers>
-                </Style>
-            </TextBox.Style>
         </TextBox>
         <Line VerticalAlignment="Bottom" Stroke="{Binding ElementName=control, Path=BorderBrush}" StrokeThickness="1" X1="0" X2="280"></Line>
-        <Line x:Name="animationLine" Stroke="Blue" StrokeThickness="1" X1="0"/>
     </Grid>
 </UserControl>
