@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\App.xaml
-13647786693
+141703410038
 
-201544527465
+211831720504
 194-1617825143
-ResourceDictionaries\AnimatedTextBlockRD.xaml;ResourceDictionaries\CustomButtonRD.xaml;ResourceDictionaries\CustomFontRD.xaml;ResourceDictionaries\ImageKeysRD.xaml;Utilities\CustomTextBox.xaml;Views\MainView.xaml;Views\MoviePages\MovieListPage.xaml;Views\MoviePages\MoviePreviewPage.xaml;Views\NavigationBarPages\HistoryPage.xaml;Views\NavigationBarPages\WatchListPage.xaml;Views\RegistrationPages\LoadingPage.xaml;Views\RegistrationPages\LoginPage.xaml;Views\RegistrationPages\SignupPage.xaml;
+ResourceDictionaries\AnimatedTextBlockRD.xaml;ResourceDictionaries\CustomButtonRD.xaml;ResourceDictionaries\CustomFontRD.xaml;ResourceDictionaries\ImageKeysRD.xaml;Utilities\CustomTextBox.xaml;Utilities\SearchBox.xaml;Views\MainView.xaml;Views\MoviePages\MovieListPage.xaml;Views\MoviePages\MoviePreviewPage.xaml;Views\NavigationBarPages\HistoryPage.xaml;Views\NavigationBarPages\WatchListPage.xaml;Views\RegistrationPages\LoadingPage.xaml;Views\RegistrationPages\LoginPage.xaml;Views\RegistrationPages\SignupPage.xaml;
 
 False
 

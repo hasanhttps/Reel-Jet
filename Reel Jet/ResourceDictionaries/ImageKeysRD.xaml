@@ -4,4 +4,8 @@
     <BitmapImage x:Key="LoginPageImg" UriSource="\Static Files\Images\ReelJet Logo 1.png"/>
     <BitmapImage x:Key="SignUpPageImg" UriSource="\Static Files\Images\SignUp Logo.jpg"/>
     <BitmapImage x:Key="SignInBackground" UriSource="\Static Files\Images\imdb_top_250.jpg"/>
+    <BitmapImage x:Key="WatchListImg" UriSource="\Static Files\Images\WatchListIcon.png"/>
+    <BitmapImage x:Key="HistoryPageImg" UriSource="\Static Files\Images\history.png"/>
+    <BitmapImage x:Key="SettingsPageImg" UriSource="\Static Files\Images\cog.png"/>
+    <BitmapImage x:Key="MaleUserProfileImg" UriSource="\Static Files\Images\MaleUserProfile.png"/>
 </ResourceDictionary>

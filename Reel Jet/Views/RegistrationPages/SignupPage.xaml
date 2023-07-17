@@ -11,6 +11,7 @@
 
     <Grid Background="Black">
         <Image Source="{StaticResource SignInBackground}" Opacity="0.1" Stretch="UniformToFill"></Image>
+        
         <Grid Width="800" Height="450">
 
             <Grid.ColumnDefinitions>
@@ -20,15 +21,12 @@
 
             <Image Grid.Column="0" Source="{StaticResource SignUpPageImg}" Stretch="UniformToFill"></Image>
 
-
             <Border Grid.Column="1" Background="#1f1f2b">
-
-
-
-                <StackPanel>
-
-                    <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Registration" FontSize="30" Foreground="White" Margin="20 5 0 50"></TextBlock>
-                    <Border Background="#ed1c24" BorderThickness="1" Height="5" Width="25" Margin="0 -90 430 0"></Border>
+                
+                <StackPanel Margin="20 0 0 0">
+                    
+                    <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Registration" FontSize="30" Foreground="White" Margin="20 10 0 50"></TextBlock>
+                    <Border Background="#ed1c24" BorderThickness="1" Height="5" Width="25" Margin="20 -90 430 0"></Border>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Name" FontSize="15" Foreground="White" Margin="20,0,100,5"/>
                         <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Surname" FontSize="15" Foreground="White" Margin="117,0,0,5" Grid.RowSpan="2"></TextBlock>
@@ -41,28 +39,35 @@
 
                     <StackPanel Orientation="Horizontal">
                         <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Username" FontSize="15" Foreground="White" Margin="20,0,100,5"/>
-                        <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Email" FontSize="15" Foreground="White" Margin="88,0,0,5" Grid.RowSpan="2"></TextBlock>
+                        <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Age" FontSize="15" Foreground="White" Margin="88,0,0,5" Grid.RowSpan="2"></TextBlock>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
                         <ut:CustomTextBox  PlaceHolder="Your Username" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="20 0 0 10" Background="Transparent" BorderBrush="White" Foreground="White"/>
-                        <ut:CustomTextBox  PlaceHolder="Your Email" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="White" Foreground="White"/>
-                    </StackPanel>
-
-
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Password" FontSize="15" Foreground="White" Margin="20,0,100,5"/>
-                        <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Confirm Password" FontSize="15" Foreground="White" Margin="93,0,0,5" Grid.RowSpan="2"></TextBlock>
+                        <ut:CustomTextBox  PlaceHolder="Your Age" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="White" Foreground="White"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <ut:CustomTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Password" Width="163" Margin="20 0 0 20" Background="Transparent" BorderBrush="White" Foreground="White"/>
+                        <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Email" FontSize="15" Foreground="White" Margin="20,0,100,5"/>
+                        <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Password" FontSize="15" Foreground="White" Margin="121,0,0,5" Grid.RowSpan="2"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <ut:CustomTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Email" Width="163" Margin="20 0 0 20" Background="Transparent" BorderBrush="White" Foreground="White"/>
+                        <ut:CustomTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your password" Width="163" Margin="97 0 0 20" Background="Transparent" BorderBrush="White" Foreground="White"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Registration Code" FontSize="15" Foreground="White" Margin="20,0,100,5"/>
+                        <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Confirm Password" FontSize="15" Foreground="White" Margin="35,0,0,5" Grid.RowSpan="2"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <ut:CustomTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Registration Code" Width="163" Margin="20 0 0 20" Background="Transparent" BorderBrush="White" Foreground="White"/>
                         <ut:CustomTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Confirm your password" Width="163" Margin="97 0 0 20" Background="Transparent" BorderBrush="White" Foreground="White"/>
                     </StackPanel>
 
-                    <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" HorizontalAlignment="Center" Text="Registration Code" FontSize="15" Foreground="White"></TextBlock>
-                    <ut:CustomTextBox PlaceHolder="Your Registration Code" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" HorizontalAlignment="Center" Width="200" Margin="10" Background="Transparent" BorderBrush="White" Foreground="White"/>
-                    <Button    FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Content="Sign Up" Width="200" Margin="50" Height="30" FontSize="15" Foreground="White"/>
+                    <Button FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Content="Sign Up" Width="200" Margin="50" Height="30" FontSize="15" Foreground="White"/>
                 </StackPanel>
             </Border>
         </Grid>
