@@ -4,9 +4,9 @@ using Reel_Jet.ViewModels.RegistrationPageModels;
 
 namespace Reel_Jet.Views.RegistrationPages {
     public partial class LoginPage : Page {
-        public LoginPage() {
+        public LoginPage(Frame frame) {
             InitializeComponent();
-            DataContext = new LoginPageModel();
+            DataContext = new LoginPageModel(frame);
         }
     }
 }

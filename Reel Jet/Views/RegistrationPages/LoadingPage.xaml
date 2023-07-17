@@ -30,21 +30,5 @@
             </Rectangle.Triggers>
         </Rectangle>
 
-
-
-
-        <!--<Line Stroke="#78333E" StrokeThickness="5" X1="0" X2="600" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0 0 0 40">
-            <Line.Triggers>
-                <EventTrigger RoutedEvent="Loaded">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Width"
-                            From="0" To="500" Duration="0:0:1.6"/>
-                            
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </Line.Triggers>
-        </Line>-->
     </Grid>
 </Page>

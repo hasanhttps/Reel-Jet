@@ -13,7 +13,7 @@ namespace Reel_Jet.ViewModels {
         private Frame MainFrame;
         public MainViewModel(Frame frame) { 
             MainFrame = frame;
-            MainFrame.Content = new SignupPage();
+            MainFrame.Content = new LoadingPage(MainFrame);
         }
 
     }

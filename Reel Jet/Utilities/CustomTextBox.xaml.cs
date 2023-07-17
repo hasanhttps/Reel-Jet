@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 
 namespace Reel_Jet.Utilities {
-    public partial class CustomTextBox : UserControl, INotifyPropertyChanged {
+    public partial class CustomTextBox : UserControl {
 
         public string PlaceHolder
         {
@@ -19,11 +19,6 @@ namespace Reel_Jet.Utilities {
 
         public CustomTextBox() {
             InitializeComponent();
-        }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName] string? propertyName = null) { 
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
