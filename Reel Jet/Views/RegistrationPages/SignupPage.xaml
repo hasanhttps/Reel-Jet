@@ -35,8 +35,8 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <ut:CustomTextBox PlaceHolder="Your Name"   FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="20 0 0 10" Background="Transparent" BorderBrush="Red" Foreground="White"/>
-                        <ut:CustomTextBox PlaceHolder="Your Surname"  FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="Red" Foreground="White"/>
+                        <ut:CustomTextBox PlaceHolder="Your Name"   FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="20 0 0 10" Background="Transparent" BorderBrush="White" Foreground="White"/>
+                        <ut:CustomTextBox PlaceHolder="Your Surname"  FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="White" Foreground="White"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
@@ -45,8 +45,8 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <ut:CustomTextBox  PlaceHolder="Your Username" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="20 0 0 10" Background="Transparent" BorderBrush="Red" Foreground="White"/>
-                        <ut:CustomTextBox  PlaceHolder="Your Email" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="Red" Foreground="White"/>
+                        <ut:CustomTextBox  PlaceHolder="Your Username" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="20 0 0 10" Background="Transparent" BorderBrush="White" Foreground="White"/>
+                        <ut:CustomTextBox  PlaceHolder="Your Email" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="White" Foreground="White"/>
                     </StackPanel>
 
 
@@ -56,12 +56,12 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <ut:CustomTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Password" Width="163" Margin="20 0 0 20" Background="Transparent" BorderBrush="Red" Foreground="White"/>
-                        <ut:CustomTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Confirm your password" Width="163" Margin="97 0 0 20" Background="Transparent" BorderBrush="Red" Foreground="White"/>
+                        <ut:CustomTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Password" Width="163" Margin="20 0 0 20" Background="Transparent" BorderBrush="White" Foreground="White"/>
+                        <ut:CustomTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Confirm your password" Width="163" Margin="97 0 0 20" Background="Transparent" BorderBrush="White" Foreground="White"/>
                     </StackPanel>
 
                     <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" HorizontalAlignment="Center" Text="Registration Code" FontSize="15" Foreground="White"></TextBlock>
-                    <ut:CustomTextBox PlaceHolder="Your Registration Code" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" HorizontalAlignment="Center" Width="200" Margin="10" Background="Transparent" BorderBrush="Red" Foreground="White"/>
+                    <ut:CustomTextBox PlaceHolder="Your Registration Code" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" HorizontalAlignment="Center" Width="200" Margin="10" Background="Transparent" BorderBrush="White" Foreground="White"/>
                     <Button    FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Content="Sign Up" Width="200" Margin="50" Height="30" FontSize="15" Foreground="White"/>
                 </StackPanel>
             </Border>
