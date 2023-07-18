@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Reel_Jet.Views.MoviePages;
+using Reel_Jet.ViewModels.MoviePageModels;
 
 namespace Reel_Jet.ViewModels.RegistrationPageModels {
     public class LoginPageModel {
@@ -34,7 +36,7 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels {
         // Functions
 
         private void SignIn(object? param) {
-            
+            MainFrame.Content = new MovieListPage(MainFrame);
         }
 
     }

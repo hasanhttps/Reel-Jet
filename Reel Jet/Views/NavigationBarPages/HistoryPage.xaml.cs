@@ -4,9 +4,9 @@ using Reel_Jet.ViewModels.NavigationBarPageModels;
 
 namespace Reel_Jet.Views.MoviePages {
     public partial class HistoryPage : Page {
-        public HistoryPage() {
+        public HistoryPage(Frame frame) {
             InitializeComponent();
-            DataContext = new HistoryPageModel();
+            DataContext = new HistoryPageModel(frame);
         }
     }
 }

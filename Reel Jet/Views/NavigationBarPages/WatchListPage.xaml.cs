@@ -4,9 +4,9 @@ using Reel_Jet.ViewModels.NavigationBarPageModels;
 
 namespace Reel_Jet.Views.NavigationBarPages {
     public partial class WatchListPage : Page {
-        public WatchListPage() {
+        public WatchListPage(Frame frame) {
             InitializeComponent();
-            DataContext = new WatchListPageModel();
+            DataContext = new WatchListPageModel(frame);
         }
     }
 }
