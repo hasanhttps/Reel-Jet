@@ -5,7 +5,7 @@
         <DoubleAnimation Storyboard.TargetProperty="Width"
                             From="0" To="500" Duration="0:0:1.6"/>
         <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)"
-                            From="-1200" To="-470" Duration="0:0:1.6"/>
+                            From="-1200" To="-570" Duration="0:0:1.6"/>
         <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:1.6"/>
     </Storyboard>
 

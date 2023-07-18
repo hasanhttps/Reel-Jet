@@ -22,35 +22,35 @@
 
             <Image Grid.Column="0" Source="{StaticResource SignUpPageImg}" Stretch="UniformToFill"></Image>
 
-            <Border Grid.Column="1" Background="#1f1f2b">
+            <Border Grid.Column="1" Background="#1f1f2b" CornerRadius="0 8 8 0">
 
-                <StackPanel Margin="20 0 0 0">
+                <StackPanel Margin="20 8 8 8">
 
                     <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Registration" FontSize="30" Foreground="White" Margin="20 10 0 50"></TextBlock>
                     <Border Background="#ed1c24" BorderThickness="1" Height="5" Width="25" Margin="20 -90 430 0"></Border>
 
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 4">
-                        <ut:BindableTextBox PlaceHolder="Your Name" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="20 0 0 10" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" />
-                        <ut:BindableTextBox PlaceHolder="Your Surname" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" />
+                        <ut:BindableTextBox PlaceHolder="Your Name" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="20 0 0 10" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" Text="{Binding newUser.Name,UpdateSourceTrigger=LostFocus,Mode=TwoWay}" />
+                        <ut:BindableTextBox PlaceHolder="Your Surname" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" Text="{Binding newUser.Surname,UpdateSourceTrigger=LostFocus,Mode=TwoWay}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 4">
+                        <ut:BindableTextBox PlaceHolder="Your Username" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="20 0 0 10" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" Text="{Binding newUser.Username,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>
+                        <ut:BindableTextBox PlaceHolder="Your Age" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" Text="{Binding newUser.Age,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>
                     </StackPanel>
                     
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 4">
-                        <ut:BindableTextBox PlaceHolder="Your Username" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="20 0 0 10" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" />
-                        <ut:BindableTextBox PlaceHolder="Your Age" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Width="163" Margin="97 0 0 10" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" />
-                    </StackPanel>
-                    
-                    <StackPanel Orientation="Horizontal" Margin="0 0 0 4">
-                        <ut:BindableTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Email" Width="163" Margin="20 0 0 20" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" />
-                        <ut:CustomPasswordBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Password" Width="163" Margin="97 0 0 20" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" />
+                        <ut:BindableTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Email" Width="163" Margin="20 0 0 20" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" Text="{Binding newUser.Email,UpdateSourceTrigger=LostFocus,Mode=TwoWay}" />
+                        <ut:CustomPasswordBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Password" Width="163" Margin="97 0 0 20" Background="Transparent" BorderBrush="White" Foreground="#6B6B77" Password="{Binding newUser.Password,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <ut:BindableTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Registration Code" Width="163"  Margin="20 0 0 20" Background="Transparent" Foreground="#6B6B77" BorderBrush="White" />
-                        <ut:CustomPasswordBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Confirm Your Password"  Width="163"  Margin="97 0 0 20" Background="Transparent" Foreground="#6B6B77" BorderBrush="White" />
+                        <ut:BindableTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Your Registration Code" Width="163"  Margin="20 0 0 20" Background="Transparent" Foreground="#6B6B77" BorderBrush="White" Text="{Binding newUser.RegCode,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>
+                        <ut:CustomPasswordBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" PlaceHolder="Confirm Your Password"  Width="163"  Margin="97 0 0 20" Background="Transparent" Foreground="#6B6B77" BorderBrush="White" Password="{Binding newUser.ConfirmPassword,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"/>
                     </StackPanel>
 
-                    <Button FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Content="Sign Up" Width="200" Margin="30" Height="35" FontSize="15" Foreground="White"/>
-                    
+                    <Button FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Content="Sign Up" Width="200" Margin="30" Height="35" FontSize="15" Foreground="White" Command="{Binding signupcommand}"/>
+
                 </StackPanel>
             </Border>
         </Grid>

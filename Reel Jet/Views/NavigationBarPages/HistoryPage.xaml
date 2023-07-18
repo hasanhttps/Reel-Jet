@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0" Background="#12121A">
-            <Button Margin="0 60 0 0" VerticalAlignment="Top">
+            <Button Margin="0 60 0 0" VerticalAlignment="Top" Command="{Binding WatchListPgButtonCommand}">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Template">
@@ -30,7 +30,7 @@
                 </Button.Style>
             </Button>
 
-            <Button Margin="0 110 0 0" VerticalAlignment="Top">
+            <Button Margin="0 110 0 0" VerticalAlignment="Top" Command="{Binding MoviePgButtonCommand}">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Template">

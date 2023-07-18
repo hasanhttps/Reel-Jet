@@ -1,12 +1,12 @@
-﻿using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
+using System.Net.Http;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
-namespace Reel_Jet.Services {
+namespace Reel_Jet.Services.WebServices {
     public static class OmdbService {
 
         private static readonly HttpClient _client = new HttpClient();
