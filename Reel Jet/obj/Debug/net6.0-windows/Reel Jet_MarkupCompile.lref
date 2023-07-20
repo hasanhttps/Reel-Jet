@@ -1,4 +1,4 @@
-﻿
+﻿C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\App.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Utilities\BindableTextBox.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Utilities\CustomPasswordBox.xaml;;
@@ -10,5 +10,7 @@ FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\HistoryP
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\WatchListPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\LoadingPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\LoginPage.xaml;;
-FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\SignupPage.xaml;;
+FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\SignUpPages\MainSignUpPage.xaml;;
+FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\SignUpPages\RegistrationPage.xaml;;
+FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\SignUpPages\ValidationPage.xaml;;
 

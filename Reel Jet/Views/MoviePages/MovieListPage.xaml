@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:ut="clr-namespace:Reel_Jet.Utilities"
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
       xmlns:local="clr-namespace:Reel_Jet.Views.MoviePages"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920" Background="#1F1F2B"
@@ -80,18 +81,30 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <ut:SearchBox PlaceHolder="Search" Height="40" Width="500"/>
+                <ut:SearchBox x:Name="SearchFilm" PlaceHolder="Search" Height="40" Width="500">
+                    <!--<ut:SearchBox.InputBindings>
+                        <KeyBinding Key="Enter" Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=SearchFilm, Path=}"/>
+                    </ut:SearchBox.InputBindings>-->
+                </ut:SearchBox>
             </Grid>
 
             <Grid Grid.Row="1">
-                <ListView ItemsSource="{Binding Movie.Search}">
+                <ListView ItemsSource="{Binding Movie.Search}" SelectedItem="{Binding MovieInfo, Mode=TwoWay}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Height="100" Width="100" Orientation="Horizontal">
+                            <StackPanel Height="100" Width="100">
                                 <Image Source="{Binding Poster}" Height="100" Width="100"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
+                    
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}" 
+                                   CommandParameter="{Binding SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+
                 </ListView>
             </Grid>
 

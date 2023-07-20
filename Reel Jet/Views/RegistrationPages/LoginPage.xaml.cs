@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using System.Windows.Controls;
 using Reel_Jet.ViewModels.RegistrationPageModels;
+using Reel_Jet.Views.RegistrationPages.SignUpPages;
 
 namespace Reel_Jet.Views.RegistrationPages {
     public partial class LoginPage : Page {
@@ -13,7 +14,7 @@ namespace Reel_Jet.Views.RegistrationPages {
         }
 
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e) {
-            MainFrame.Content = new SignupPage(MainFrame);
+            MainFrame.Content = new MainSignUpPage(MainFrame);
         }
     }
 }

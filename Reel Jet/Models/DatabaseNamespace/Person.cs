@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
+using System.ComponentModel;
+using System.Text.RegularExpressions;
+using System.Runtime.CompilerServices;
 
 
 namespace Reel_Jet.Models.DatabaseNamespace {
@@ -22,7 +18,7 @@ namespace Reel_Jet.Models.DatabaseNamespace {
 		public string Email {
 			get { return _email; }
 			set { 
-				if (!Regex.IsMatch(value, "[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+") || String.IsNullOrEmpty(value)) 
+				if (!Regex.IsMatch(value, "[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+")) 
 					MessageBox.Show("Invalid Email", "Warning", MessageBoxButton.OK,MessageBoxImage.Warning); 
 				else
 					_email = value; OnProperty();
@@ -33,7 +29,7 @@ namespace Reel_Jet.Models.DatabaseNamespace {
 		public string Password {
 			get { return _password; }
 			set { 
-				if (!Regex.IsMatch(value, "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$") || String.IsNullOrEmpty(value)) 
+				if (!Regex.IsMatch(value, "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$")) 
 					MessageBox.Show("Invalid Password", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
 				else
 					_password = value; OnProperty();

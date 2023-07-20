@@ -14,7 +14,6 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\Nav
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\NavigationBarPages\WatchListPage.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\LoadingPage.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\LoginPage.g.cs
-C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\SignupPage.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet_MarkupCompile.cache
@@ -27,7 +26,6 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\Nav
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\NavigationBarPages\WatchListPage.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\LoadingPage.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\LoginPage.baml
-C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\SignupPage.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet.g.resources
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet.AssemblyInfoInputs.cache
@@ -60,3 +58,16 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Microsoft
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\BindableTextBox.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\BindableTextBox.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet_Content.g.cs
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\SignUpPages\MainSignUpPage.g.cs
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\SignUpPages\RegistrationPage.g.cs
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\SignUpPages\ValidationPage.g.cs
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\SignUpPages\MainSignUpPage.baml
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\SignUpPages\RegistrationPage.baml
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\RegistrationPages\SignUpPages\ValidationPage.baml

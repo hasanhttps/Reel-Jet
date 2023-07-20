@@ -9,4 +9,6 @@
     <BitmapImage x:Key="SettingsPageImg" UriSource="\Static Files\Images\cog.png"/>
     <BitmapImage x:Key="MaleUserProfileImg" UriSource="\Static Files\Images\MaleUserProfile.png"/>
     <BitmapImage x:Key="MovieImg" UriSource="\Static Files\Images\MovieIcon.png"/>
+    <BitmapImage x:Key="StarImg" UriSource="\Static Files\Images\star.png"/>
+    <BitmapImage x:Key="LockImg" UriSource="\Static Files\Images\lock.png"/>
 </ResourceDictionary>

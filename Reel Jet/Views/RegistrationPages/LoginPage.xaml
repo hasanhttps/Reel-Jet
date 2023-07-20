@@ -33,8 +33,8 @@
                         <TextBlock FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Sign in to your account" Foreground="#6B6B77" FontSize="12"/>
                     </StackPanel>
 
-                    <ut:BindableTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Margin="0 70 0 0" BorderBrush="White" Height="40" Foreground="#6B6B77" PlaceHolder="Email" Text="{Binding Email, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
-                    <ut:CustomPasswordBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Margin="0 10 0 0" BorderBrush="White" Height="40" Foreground="#6B6B77" PlaceHolder="Password" Password="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                    <ut:BindableTextBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Margin="0 70 0 0" BorderBrush="White" Height="40" Foreground="#6B6B77" PlaceHolder="Email" Text="{Binding NewUser.Email, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"/>
+                    <ut:CustomPasswordBox FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Margin="0 10 0 0" BorderBrush="White" Height="40" Foreground="#6B6B77" PlaceHolder="Password" Password="{Binding NewUser.Password, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"/>
 
                     <StackPanel>
                         <TextBlock Margin="0 20 0 20" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Text="Forgot Password?" Foreground="#6B6B77" FontSize="10" Height="19"/>
@@ -45,7 +45,7 @@
                             <TextBlock Margin="5 0" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Foreground="Red" Text="Sign Up" TextDecorations="Underline" MouseDown="TextBlock_MouseDown"/>
                         </StackPanel>
                     </StackPanel>
-                    
+
                 </StackPanel>
             </Grid>
         </Border>

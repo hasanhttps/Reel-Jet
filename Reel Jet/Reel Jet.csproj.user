@@ -16,6 +16,15 @@
     <Compile Update="Utilities\BindableTextBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\RegistrationPages\SignUpPages\MainSignUpPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RegistrationPages\SignUpPages\RegistrationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RegistrationPages\SignUpPages\ValidationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Utilities\CustomPasswordBox.xaml">
@@ -25,6 +34,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Utilities\BindableTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RegistrationPages\SignUpPages\MainSignUpPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RegistrationPages\SignUpPages\RegistrationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RegistrationPages\SignUpPages\ValidationPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -1,14 +1,9 @@
-﻿using Reel_Jet.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.Xml;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
+using Reel_Jet.Commands;
 using System.Windows.Input;
+using System.Windows.Controls;
 using Reel_Jet.Views.MoviePages;
+using Reel_Jet.Models.DatabaseNamespace;
 using Reel_Jet.ViewModels.MoviePageModels;
 using static Reel_Jet.Models.DatabaseNamespace.Database;
 
@@ -22,8 +17,8 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels {
         // Binding Properties
 
         public ICommand? SignInCommand { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
+
+        public User NewUser { get; set; } = new();
 
         // Constructor
 
@@ -37,10 +32,13 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels {
         // Functions
 
         private void SignIn(object? param) {
-            if (CheckUserExist(Email, Password))
-                MainFrame.Content = new MovieListPage(MainFrame);
-            else 
-                MessageBox.Show("This account doesn't exist!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            if (!string.IsNullOrEmpty(NewUser.Email) && !string.IsNullOrEmpty(NewUser.Password)) 
+                if (NewUser.LogIn(NewUser.Email, NewUser.Password)) 
+                    MainFrame.Content = new MovieListPage(MainFrame);
+                else 
+                    MessageBox.Show("This account doesn't exist!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);     
+            else
+                MessageBox.Show("Fill all the required fields", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
     }

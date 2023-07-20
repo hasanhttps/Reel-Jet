@@ -11,6 +11,8 @@
           "MaterialDesignThemes": "4.9.0",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.Configuration.Json": "7.0.0",
+          "Microsoft.Web.WebView2": "1.0.1823.32",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
@@ -130,6 +132,39 @@
           "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2/1.0.1823.32": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.1823.32",
+            "fileVersion": "1.0.1823.32"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.1823.32",
+            "fileVersion": "1.0.1823.32"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.1823.32",
+            "fileVersion": "1.0.1823.32"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.1823.32"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.1823.32"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.1823.32"
           }
         }
       },
@@ -258,6 +293,13 @@
       "sha512": "sha512-um1KU5kxcRp3CNuI8o/GrZtD4AIOXDk+RLsytjZ9QPok3ttLUelLKpilVPuaFT3TFjOhSibUAso0odbOaCDj3Q==",
       "path": "microsoft.extensions.primitives/7.0.0",
       "hashPath": "microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.1823.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppRcWBUNggFIqyJp7PfgS4Oe8/7yli/mHcTNDOaqo3ZzJWnv9AOr0WE9ceEP5SPs1M7CQ3QvdGMR7KNz0v09EA==",
+      "path": "microsoft.web.webview2/1.0.1823.32",
+      "hashPath": "microsoft.web.webview2.1.0.1823.32.nupkg.sha512"
     },
     "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
       "type": "package",

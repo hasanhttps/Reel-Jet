@@ -8,5 +8,6 @@ namespace Reel_Jet.Views.MoviePages {
             InitializeComponent();
             DataContext = new MoviewListPageModel(frame);
         }
+
     }
 }

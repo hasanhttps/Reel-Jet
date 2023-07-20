@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Windows.Controls;
+using Reel_Jet.Models.MovieNamespace;
 using Reel_Jet.ViewModels.MoviePageModels;
 
 namespace Reel_Jet.Views.MoviePages {
     public partial class MoviePreviewPage : Page {
-        public MoviePreviewPage() {
+        public MoviePreviewPage(Frame frame, ShortMovieInfo movieInfo) {
             InitializeComponent();
+            DataContext = new MoviePreviewPageModel(frame, movieInfo);
         }
     }
 }

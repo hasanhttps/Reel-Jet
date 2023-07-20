@@ -1,19 +1,16 @@
-﻿using System.IO;
-using Newtonsoft.Json;
-using System.Text.Json;
+﻿using System.Windows;
 using Reel_Jet.Commands;
 using System.Windows.Input;
+using System.ComponentModel;
 using System.Windows.Controls;
 using Reel_Jet.Views.MoviePages;
 using System.Collections.Generic;
+using Reel_Jet.Services.WebServices;
 using Reel_Jet.Models.MovieNamespace;
+using System.Runtime.CompilerServices;
 using Reel_Jet.Views.NavigationBarPages;
 using static Reel_Jet.Services.WebServices.OmdbService;
-using System.Collections.ObjectModel;
-using Reel_Jet.Services.WebServices;
-using System.Windows;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+
 
 namespace Reel_Jet.ViewModels.MoviePageModels {
     public class MoviewListPageModel : INotifyPropertyChanged {
@@ -21,12 +18,15 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         // Private Fields
 
         private Frame MainFrame;
-        private MovieCollection _movie; 
+        private MovieCollection _movie;
+        private ShortMovieInfo _movieInfo;
 
         // Binding Properties
 
         public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? WatchListPgButtonCommand { get; set; }
+        public ICommand? SelectionChangedCommand { get; set; }
+        public ICommand? SearchCommand { get; set; }
         public MovieCollection Movie {
             get => _movie;
             set { 
@@ -34,6 +34,11 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
                 OnPropertyChanged();
             }
         }
+        public ShortMovieInfo MovieInfo {
+            get { return _movieInfo; }
+            set { _movieInfo = value; }
+        }
+
 
         // Constructor
 
@@ -42,7 +47,8 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
             HistoryPgButtonCommand = new RelayCommand(HistoryPage);
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
-            TaskToJson();
+            SelectionChangedCommand = new RelayCommand(SelectionChanged);
+            SearchCommand = new RelayCommand(Search);
         }
 
         // Functions
@@ -56,9 +62,19 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         }
 
         private async void TaskToJson() {
-            var jsonStr = await OmdbService.GetAllMoviesByTitle("Fight Club");
+            var jsonStr = await OmdbService.GetAllMoviesByTitle("");
             Movie = System.Text.Json.JsonSerializer.Deserialize<MovieCollection>(jsonStr);
-            MessageBox.Show(Movie.Search.Count.ToString());
+        }
+
+        private void SelectionChanged(object? param) {
+            MovieInfo = (ShortMovieInfo)param!;
+            MainFrame.Content = new MoviePreviewPage(MainFrame, MovieInfo);
+        }
+
+        private void Search(object? param) {
+            string text = param as string;
+            MessageBox.Show(text);
+            TaskToJson();
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

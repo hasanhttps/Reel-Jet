@@ -24,7 +24,8 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels {
 
         private void Timer_Tick(object? sender, EventArgs e) {
             // Stop the timer
-            ((DispatcherTimer)sender).Stop();
+            
+            ((DispatcherTimer)sender!).Stop();
             MainFrame.Content = new LoginPage(MainFrame);
         }
 
