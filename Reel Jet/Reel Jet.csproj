@@ -20,17 +20,18 @@
     <None Remove="Static Files\Images\imdb_top_250.jpg" />
     <None Remove="Static Files\Images\LoadingImage.jpg" />
     <None Remove="Static Files\Images\MaleUserProfile.png" />
+    <None Remove="Static Files\Images\movie %281%29.ico" />
     <None Remove="Static Files\Images\MovieIcon.png" />
     <None Remove="Static Files\Images\ReelJet Logo 1.png" />
     <None Remove="Static Files\Images\SignUp Logo.jpg" />
     <None Remove="Static Files\Images\WatchListIcon.png" />
-    <None Remove="Views\movie %281%29.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,13 +46,13 @@
     <Resource Include="Static Files\Images\cog.png" />
     <Resource Include="Static Files\Images\history.png" />
     <Resource Include="Static Files\Images\MaleUserProfile.png" />
+    <Resource Include="Static Files\Images\movie (1).ico" />
     <Resource Include="Static Files\Images\MovieIcon.png" />
     <Resource Include="Static Files\Images\WatchListIcon.png" />
     <Resource Include="Static Files\Images\imdb_top_250.jpg" />
     <Resource Include="Static Files\Images\LoadingImage.jpg" />
     <Resource Include="Static Files\Images\ReelJet Logo 1.png" />
     <Resource Include="Static Files\Images\SignUp Logo.jpg" />
-    <Resource Include="Views\movie (1).ico" />
   </ItemGroup>
 
 </Project>

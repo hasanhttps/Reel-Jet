@@ -12,14 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
-
+ 
 
 namespace Reel_Jet.Utilities {
     public partial class CustomPasswordBox : UserControl {
-        public CustomPasswordBox() {
-            InitializeComponent();
-        }
+        
+        // Private Fields
+
+        private bool _isPasswordChanging;
+        
+        // Properties
 
         public string PlaceHolder {
             get { return (string)GetValue(PlaceHolderProperty); }
@@ -30,17 +32,24 @@ namespace Reel_Jet.Utilities {
             set { SetValue(PasswordProperty, value); }
         }
 
+        // Dependancy Property
 
-        // Using a DependencyProperty as the backing store for PlaceHolder.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty PlaceHolderProperty =
             DependencyProperty.Register("PlaceHolder", typeof(string), typeof(CustomPasswordBox));
-
-        private bool _isPasswordChanging;
+        
 
         public static readonly DependencyProperty PasswordProperty =
             DependencyProperty.Register("Password", typeof(string), typeof(CustomPasswordBox),
                 new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault,
                     PasswordPropertyChanged, null, false, UpdateSourceTrigger.PropertyChanged));
+
+        // Constructor
+        
+        public CustomPasswordBox() {
+            InitializeComponent();
+        }
+
+        // Functions
 
         private static void PasswordPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
             if (d is CustomPasswordBox passwordBox) {
@@ -58,6 +67,10 @@ namespace Reel_Jet.Utilities {
             if (!_isPasswordChanging) {
                 passwordBox.Password = Password;
             }
+        }
+
+        private void passwordBox_GotFocus(object sender, RoutedEventArgs e) {
+            passwordBox.Foreground = new SolidColorBrush(Colors.White);
         }
     }
 }

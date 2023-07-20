@@ -9,6 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="800" Name="control">
     <Grid>
         <TextBox
+            x:Name="txtbox"
             FontSize="12"
             Text="{Binding ElementName=control, Path=Text,UpdateSourceTrigger=PropertyChanged}"
             FontWeight="Medium"
@@ -20,7 +21,9 @@
             materialDesign:HintAssist.Foreground="White"
             materialDesign:TextFieldAssist.UnderlineBrush="Red"
             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-            VerticalAlignment="Center"/>
-        
+            VerticalAlignment="Center"
+            GotFocus="TextBox_GotFocus">
+
+        </TextBox>
     </Grid>
 </UserControl>

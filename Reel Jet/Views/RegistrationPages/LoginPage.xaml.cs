@@ -13,7 +13,7 @@ namespace Reel_Jet.Views.RegistrationPages {
         }
 
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e) {
-            MainFrame.Content = new SignupPage();
+            MainFrame.Content = new SignupPage(MainFrame);
         }
     }
 }

@@ -83,6 +83,18 @@
                 <ut:SearchBox PlaceHolder="Search" Height="40" Width="500"/>
             </Grid>
 
+            <Grid Grid.Row="1">
+                <ListView ItemsSource="{Binding Movie.Search}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Height="100" Width="100" Orientation="Horizontal">
+                                <Image Source="{Binding Poster}" Height="100" Width="100"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
         </Grid>
         
     </Grid>

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using static Reel_Jet.Models.DatabaseNamespace.JsonHandling;
+using System.Windows.Controls;
 
 namespace Reel_Jet.Models.DatabaseNamespace {
     public static class Database {
@@ -12,6 +13,7 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         // Properties
 
         public static ObservableCollection<User> Users { get; set; } = new();
+        public static Dictionary<string, TextBlock> ErrorLabels { get; set; } = new();
 
         // Constructor
         

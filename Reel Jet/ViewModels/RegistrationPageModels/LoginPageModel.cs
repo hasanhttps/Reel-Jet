@@ -10,6 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using Reel_Jet.Views.MoviePages;
 using Reel_Jet.ViewModels.MoviePageModels;
+using static Reel_Jet.Models.DatabaseNamespace.Database;
 
 namespace Reel_Jet.ViewModels.RegistrationPageModels {
     public class LoginPageModel {
@@ -36,7 +37,10 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels {
         // Functions
 
         private void SignIn(object? param) {
-            MainFrame.Content = new MovieListPage(MainFrame);
+            if (CheckUserExist(Email, Password))
+                MainFrame.Content = new MovieListPage(MainFrame);
+            else 
+                MessageBox.Show("This account doesn't exist!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
     }

@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Text.RegularExpressions;
 using Reel_Jet.Services.InterfaceServices;
+using static Reel_Jet.Models.DatabaseNamespace.Database;
 
 #nullable disable
 
@@ -69,7 +70,17 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         }
 
         public void SignUp() {
-            // database -ya elave 
+            if (Name != null) {
+                if (Surname != null) {
+                    if (Age != null) {
+                        if (Username != null) {
+                            if (Password != null) {
+
+                            }
+                        }
+                    }
+                }
+            } 
         }
         
     }

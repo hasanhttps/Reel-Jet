@@ -1,26 +1,27 @@
-﻿using Reel_Jet.Commands;
-using Reel_Jet.Models.DatabaseNamespace;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
+using Reel_Jet.Commands;
+using System.Windows.Input;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using Reel_Jet.Models.DatabaseNamespace;
+using System.Windows.Controls;
+
+#nullable disable
 
 namespace Reel_Jet.ViewModels.RegistrationPageModels {
     public class SignupPageModel {
 
         // Private Fields
 
+        private Frame MainFrame;
         private string confirmPassword;
         private string regCode;
 
         // Binding Properties
 
         public User newUser { get; set; } = new();
-        public RelayCommand SignUpCommand { get; set; }
+        public ICommand SignUpCommand { get; set; }
         public string ConfirmPassword {
             get => confirmPassword;
             set {
@@ -30,7 +31,6 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels {
                 confirmPassword = value; OnProperty();
             }
         }
-
         public string RegCode {
             get => regCode; 
             set {
@@ -43,14 +43,16 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels {
 
         // Constructor
 
-        public SignupPageModel() { 
-            SignUpCommand = new(SignUp);
+        public SignupPageModel(Frame frame) {
+            MainFrame = frame;
+            SignUpCommand = new RelayCommand(SignUp);
         }
 
         // Functions
 
         public void SignUp(object? param) {
-            if (ConfirmPassword == newUser.Password) newUser.SignUp(); // serti
+            if (ConfirmPassword == newUser.Password) 
+                newUser.SignUp(); // serti
         }
 
         // Property Changed

@@ -59,3 +59,4 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\MaterialD
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\BindableTextBox.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\BindableTextBox.baml
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

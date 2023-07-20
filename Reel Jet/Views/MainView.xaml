@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Reel_Jet.Views"
         mc:Ignorable="d"
-        
-        Title="Reel Jet" MinHeight="470" MinWidth="817" WindowState="Maximized" WindowStartupLocation="CenterScreen" Icon="/Views/movie (1).ico">
+        Icon="/Static Files/Images/movie (1).ico"
+        Title="Reel Jet" MinHeight="470" MinWidth="817" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    
     <Grid>
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden">
 
