@@ -10,7 +10,7 @@ using Reel_Jet.Models.MovieNamespace;
 using System.Runtime.CompilerServices;
 using Reel_Jet.Views.NavigationBarPages;
 using static Reel_Jet.Services.WebServices.OmdbService;
-
+using System.Collections.ObjectModel;
 
 namespace Reel_Jet.ViewModels.MoviePageModels {
     public class MoviewListPageModel : INotifyPropertyChanged {
@@ -19,7 +19,6 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         private Frame MainFrame;
         private MovieCollection _movie;
-        private ShortMovieInfo _movieInfo;
 
         // Binding Properties
 
@@ -27,18 +26,14 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         public ICommand? WatchListPgButtonCommand { get; set; }
         public ICommand? SelectionChangedCommand { get; set; }
         public ICommand? SearchCommand { get; set; }
-        public MovieCollection Movie {
+        public ObservableCollection<Movie> Movies { get; set; }
+        public MovieCollection MovieCollection {
             get => _movie;
             set { 
                 _movie = value;
                 OnPropertyChanged();
             }
         }
-        public ShortMovieInfo MovieInfo {
-            get { return _movieInfo; }
-            set { _movieInfo = value; }
-        }
-
 
         // Constructor
 
@@ -49,6 +44,9 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             SelectionChangedCommand = new RelayCommand(SelectionChanged);
             SearchCommand = new RelayCommand(Search);
+
+            TaskToJson();
+            ChangeShortMovieFul();
         }
 
         // Functions
@@ -62,19 +60,27 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         }
 
         private async void TaskToJson() {
-            var jsonStr = await OmdbService.GetAllMoviesByTitle("");
-            Movie = System.Text.Json.JsonSerializer.Deserialize<MovieCollection>(jsonStr);
+            var jsonStr = await OmdbService.GetAllMoviesByTitle("Fight Club");
+            MovieCollection = System.Text.Json.JsonSerializer.Deserialize<MovieCollection>(jsonStr);
         }
 
         private void SelectionChanged(object? param) {
-            MovieInfo = (ShortMovieInfo)param!;
-            MainFrame.Content = new MoviePreviewPage(MainFrame, MovieInfo);
+            Movie movie = (Movie)param!;
+            MainFrame.Content = new MoviePreviewPage(MainFrame, movie);
         }
 
         private void Search(object? param) {
             string text = param as string;
             MessageBox.Show(text);
             TaskToJson();
+            ChangeShortMovieFul();
+        }
+
+        private async void ChangeShortMovieFul() {
+            foreach(var movie in MovieCollection.Search) {
+                var jsonStr = await OmdbService.GetConcreteMovieById(movie.imdbID);
+                Movies.Add(System.Text.Json.JsonSerializer.Deserialize<Movie>(jsonStr)!);
+            }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

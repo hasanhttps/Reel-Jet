@@ -1,0 +1,20 @@
+﻿Reel Jet
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\
+Reel_Jet
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\App.xaml
+161347577180
+3-1533126420
+42482078870
+209-2020931043
+ResourceDictionaries\AnimatedTextBlockRD.xaml;ResourceDictionaries\CustomButtonRD.xaml;ResourceDictionaries\ImageKeysRD.xaml;Utilities\BindableTextBox.xaml;Utilities\CustomPasswordBox.xaml;Utilities\SearchBox.xaml;Views\MainView.xaml;Views\MoviePages\MovieListPage.xaml;Views\MoviePages\MoviePreviewPage.xaml;Views\NavigationBarPages\HistoryPage.xaml;Views\NavigationBarPages\WatchListPage.xaml;Views\RegistrationPages\LoadingPage.xaml;Views\RegistrationPages\LoginPage.xaml;Views\RegistrationPages\SignUpPages\MainSignUpPage.xaml;Views\RegistrationPages\SignUpPages\RegistrationPage.xaml;Views\RegistrationPages\SignUpPages\ValidationPage.xaml;
+
+True
+

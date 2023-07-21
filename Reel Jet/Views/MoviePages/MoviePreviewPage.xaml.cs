@@ -5,9 +5,9 @@ using Reel_Jet.ViewModels.MoviePageModels;
 
 namespace Reel_Jet.Views.MoviePages {
     public partial class MoviePreviewPage : Page {
-        public MoviePreviewPage(Frame frame, ShortMovieInfo movieInfo) {
+        public MoviePreviewPage(Frame frame, Movie movie) {
             InitializeComponent();
-            DataContext = new MoviePreviewPageModel(frame, movieInfo);
+            DataContext = new MoviePreviewPageModel(frame, movie);
         }
     }
 }
