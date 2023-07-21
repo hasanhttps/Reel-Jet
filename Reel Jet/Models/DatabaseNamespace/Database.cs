@@ -12,13 +12,15 @@ namespace Reel_Jet.Models.DatabaseNamespace {
 
         // Properties
 
-        public static ObservableCollection<User> Users { get; set; } = new();
+        public static ObservableCollection<User> Users { get; set; }
         public static Dictionary<string, TextBlock> ErrorLabels { get; set; } = new();
 
         // Constructor
         
         static Database() {
-            Users = ReadData<ObservableCollection<User>>("users")!;
+            Users = ReadData<ObservableCollection<User>>("users");
+            if (Users == null)
+                Users = new();
         }
 
         // Functions
