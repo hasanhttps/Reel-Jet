@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Windows.Controls;
 using Microsoft.Web.WebView2.Wpf;
 using System.Runtime.CompilerServices;
+using System.Windows;
 
 namespace Reel_Jet.ViewModels.MoviePageModels {
     class VideoPlayerPageModel : INotifyPropertyChanged {
@@ -30,44 +31,77 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         public VideoPlayerPageModel(Frame frame, string title, WebView2 player) {
             MainFrame = frame;
             Player = player;
-            _search = title.ToLower();
-            _search = _search.Replace(" ", "+");
-            ScrapeDiziBox();
+            SearchAlgorithm(title);
+            if (!CheckMovieExist())
+                MessageBox.Show("Video not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         // Functions
 
-        private void ScrapeDiziBox() {
+        private void SearchAlgorithm(string title) {
+            _search = title.ToLower();
+            _search = _search.Replace(" ", "+");
+            _search = _search.Replace("ı", "i");
+        }
+
+        private bool CheckMovieExist() {
+            if (ScrapeDiziBox()) return true;
+            return false;
+        }
+
+        // Scraping
+
+        // DiziBox
+
+        private bool ScrapeDiziBox() {
+            try {
+                string? VideoPageLink = FindVideoLinkDiziBox();
+                FindEmbedVideoLinkDiziBox(VideoPageLink);
+                Uri uri = new Uri(VideoUrl);
+                Player.Source = uri;
+                return true;
+            }
+            catch {
+                return false;
+            }
+        }
+
+        private string? FindVideoLinkDiziBox() {
             string url = "https://www.dizifilmbox.pw/?s=" + _search;
             var httpClient = new HttpClient();
             var html = httpClient.GetStringAsync(url).Result;
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
-
             var nodes = htmlDocument.DocumentNode.SelectNodes("//a[@href]");
-            HtmlAttribute scr = null;
+            HtmlAttribute? scr = null;
 
             foreach (var node in nodes) {
                 try {
-
                     if (node.Attributes["href"]!.Value.Substring(0, 35) == "https://www.dizifilmbox.pw/filmler/") {
                         scr = node.Attributes["href"];
                         break;
                     }
                 }
-                catch {
-                }
+                catch { }
             }
-            html = httpClient.GetStringAsync(scr.Value).Result;
-            htmlDocument = new HtmlDocument();
+
+            return scr.Value;
+        }
+
+        private void FindEmbedVideoLinkDiziBox(string? VideoPageLink) {
+
+            var httpClient = new HttpClient();
+            var htmlDocument = new HtmlDocument();
+            var html = httpClient.GetStringAsync(VideoPageLink).Result;
             htmlDocument.LoadHtml(html);
+
             var node2 = htmlDocument.DocumentNode.SelectSingleNode("//iframe[@src]");
             HtmlAttribute scr2 = node2.Attributes["src"];
+
             if (scr2.Value.Substring(0, 5) == "https") VideoUrl = scr2.Value;
             else VideoUrl = "https:" + scr2.Value;
-            Uri uri = new Uri(VideoUrl);
-            Player.Source = uri;
         }
+
 
         // INotifyPropertyChanged
 

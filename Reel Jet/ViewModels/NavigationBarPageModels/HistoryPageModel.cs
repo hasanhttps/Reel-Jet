@@ -1,13 +1,13 @@
-﻿using Reel_Jet.Commands;
-using Reel_Jet.Views.MoviePages;
-using Reel_Jet.Views.NavigationBarPages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System;
+using Reel_Jet.Commands;
 using System.Windows.Input;
+using System.Windows.Controls;
+using Reel_Jet.Views.MoviePages;
+using System.Collections.ObjectModel;
+using Reel_Jet.Models.MovieNamespace;
+using Reel_Jet.Views.NavigationBarPages;
+using static Reel_Jet.Models.DatabaseNamespace.Database;
+
 
 namespace Reel_Jet.ViewModels.NavigationBarPageModels {
     public class HistoryPageModel {
@@ -18,6 +18,7 @@ namespace Reel_Jet.ViewModels.NavigationBarPageModels {
 
         // Binding Properties
 
+        public ObservableCollection<Movie> History { get; set; } = CurrentUser.HistoryList; 
         public ICommand? WatchListPgButtonCommand { get; set; }
         public ICommand? MoviePgButtonCommand { get; set; }
 

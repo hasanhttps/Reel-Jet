@@ -8,6 +8,7 @@ using Reel_Jet.Views.MoviePages;
 using Reel_Jet.Services.WebServices;
 using Reel_Jet.Models.MovieNamespace;
 using System.Runtime.CompilerServices;
+using static Reel_Jet.Models.DatabaseNamespace.Database;
 
 
 namespace Reel_Jet.ViewModels.MoviePageModels {
@@ -48,7 +49,17 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         }
         
         private void VideoPlayerPage(object? param) {
+            
+            bool isContain = false;
+
             MainFrame.Content = new VideoPlayerPage(MainFrame, Movie.Title);
+            foreach(var movie in CurrentUser.HistoryList) {
+                if (movie == Movie)
+                    isContain = true;
+            }
+
+            if (!isContain) 
+                CurrentUser.HistoryList.Add(Movie);
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

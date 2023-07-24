@@ -27,6 +27,7 @@
     <None Remove="Static Files\Images\MovieIcon.png" />
     <None Remove="Static Files\Images\no-poster.png" />
     <None Remove="Static Files\Images\play.png" />
+    <None Remove="Static Files\Images\playvideohistory.png" />
     <None Remove="Static Files\Images\plus.png" />
     <None Remove="Static Files\Images\ReelJet Logo 1.png" />
     <None Remove="Static Files\Images\SignUp Logo.jpg" />
@@ -65,6 +66,7 @@
     <Resource Include="Static Files\Images\movie (1).ico" />
     <Resource Include="Static Files\Images\MovieIcon.png" />
     <Resource Include="Static Files\Images\no-poster.png" />
+    <Resource Include="Static Files\Images\playvideohistory.png" />
     <Resource Include="Static Files\Images\plus.png" />
     <Resource Include="Static Files\Images\star.png" />
     <Resource Include="Static Files\Images\WatchListIcon.png" />

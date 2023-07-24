@@ -14,7 +14,6 @@ namespace Reel_Jet.Models.DatabaseNamespace {
 
         public static ObservableCollection<User> Users { get; set; }
         public static Dictionary<string, TextBlock> ErrorLabels { get; set; } = new();
-
         public static User CurrentUser { get; set; } = new();
 
         // Constructor

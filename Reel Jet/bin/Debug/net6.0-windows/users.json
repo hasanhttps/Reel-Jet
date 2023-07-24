@@ -87,6 +87,128 @@
         "Response": "True"
       }
     ],
+    "HistoryList": [
+      {
+        "Title": "Fight Club",
+        "Year": "1999",
+        "Rated": "R",
+        "Released": "15 Oct 1999",
+        "Runtime": "139 min",
+        "Genre": "Drama",
+        "Director": "David Fincher",
+        "Writer": "Chuck Palahniuk, Jim Uhls",
+        "Actors": "Brad Pitt, Edward Norton, Meat Loaf",
+        "Plot": "A nameless first person narrator (Edward Norton) attends support groups in attempt to subdue his emotional state and relieve his insomniac state. When he meets Marla (Helena Bonham Carter), another fake attendee of support groups, his life seems to become a little more bearable. However when he associates himself with Tyler (Brad Pitt) he is dragged into an underground fight club and soap making scheme. Together the two men spiral out of control and engage in competitive rivalry for love and power.",
+        "Language": "English",
+        "Country": "Germany, United States",
+        "Awards": "Nominated for 1 Oscar. 12 wins \u0026 38 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "79%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "66/100"
+          }
+        ],
+        "Metascore": "66",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,194,869",
+        "imdbID": "tt0137523",
+        "Type": "movie",
+        "DVD": "14 Oct 2003",
+        "BoxOffice": "$37,030,102",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "Plot": "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb\u0027s rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible, inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea, but to plant one. If they succeed, it could be the perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming.",
+        "Language": "English, Japanese, French",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 4 Oscars. 159 wins \u0026 220 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "87%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "74/100"
+          }
+        ],
+        "Metascore": "74",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,425,956",
+        "imdbID": "tt1375666",
+        "Type": "movie",
+        "DVD": "07 Dec 2010",
+        "BoxOffice": "$292,587,330",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "The Amazing Spider-Man",
+        "Year": "2012",
+        "Rated": "PG-13",
+        "Released": "03 Jul 2012",
+        "Runtime": "136 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Marc Webb",
+        "Writer": "James Vanderbilt, Alvin Sargent, Steve Kloves",
+        "Actors": "Andrew Garfield, Emma Stone, Rhys Ifans",
+        "Plot": "Peter Parker (Garfield) is an outcast high schooler who was abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben (Sheen) and Aunt May (Field). Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. Peter is also finding his way with his first high school crush, Gwen Stacy (Stone), and together, they struggle with love, commitment, and secrets. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents\u0027 disappearance - leading him directly to Oscorp and the lab of Dr. Curt Connors (Ifans), his father\u0027s former partner. As Spider-Man is set on a collision course with Connors\u0027 alter-ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "2 wins \u0026 31 nominations",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjMyOTM4MDMxNV5BMl5BanBnXkFtZTcwNjIyNzExOA@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "71%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "66/100"
+          }
+        ],
+        "Metascore": "66",
+        "imdbRating": "6.9",
+        "imdbVotes": "676,235",
+        "imdbID": "tt0948470",
+        "Type": "movie",
+        "DVD": "09 Nov 2012",
+        "BoxOffice": "$262,030,663",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
     "Email": "hasanabdullazad@gmail.com",
     "Password": "2000Hasan"
   }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows;
+using System.Collections.ObjectModel;
+using Reel_Jet.Models.MovieNamespace;
 using System.Text.RegularExpressions;
 using Reel_Jet.Services.InterfaceServices;
 using static Reel_Jet.Models.DatabaseNamespace.Database;
-using System.Collections.ObjectModel;
-using Reel_Jet.Models.MovieNamespace;
 
 #nullable disable
 
@@ -66,6 +66,7 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         }
 
         public ObservableCollection<Movie> MyWatchList { get; set; } = new();
+        public ObservableCollection<Movie> HistoryList { get; set; } = new();
 
         // Functions
 

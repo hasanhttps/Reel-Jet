@@ -34,6 +34,39 @@
                 <ut:SearchBox PlaceHolder="Search" Height="40" Width="500"/>
             </Grid>
 
+            <Grid Grid.Row="1">
+                <ListView ItemsSource="{Binding History}" Margin="60 10 80 0 ">
+
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Width="194" Height="282" Background="#12121A" Margin="20 0 20 0">
+                                <Image Source="{Binding Poster}" Stretch="UniformToFill"/>
+                                <Button Height="45" Width="45">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate>
+
+                                                        <Image Source="{StaticResource PlayMovieHistoryImg}" Width="45"/>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
         </Grid>
     </Grid>
 </Page>
