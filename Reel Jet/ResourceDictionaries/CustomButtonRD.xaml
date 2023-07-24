@@ -98,4 +98,20 @@
         </Setter>
     </Style>
 
+    <Style TargetType="Button" x:Key="WatchMovieButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="4" Height="40" Width="145" Background="#3A3CB3" BorderBrush="#12121A" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Watch Movie" FontSize="12" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="25 0 15 0"/>
+                            <Image Source="{StaticResource WatchMovieImg}" Height="20.56" Width="20" VerticalAlignment="Center" Margin="0 0 15 0"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
 </ResourceDictionary>

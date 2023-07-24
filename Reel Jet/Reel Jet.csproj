@@ -32,10 +32,12 @@
     <None Remove="Static Files\Images\SignUp Logo.jpg" />
     <None Remove="Static Files\Images\star.png" />
     <None Remove="Static Files\Images\WatchListIcon.png" />
+    <None Remove="Static Files\Images\watchmovie.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.50" />
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
@@ -70,6 +72,7 @@
     <Resource Include="Static Files\Images\LoadingImage.jpg" />
     <Resource Include="Static Files\Images\ReelJet Logo 1.png" />
     <Resource Include="Static Files\Images\SignUp Logo.jpg" />
+    <Resource Include="Static Files\Images\watchmovie.png" />
   </ItemGroup>
 
 </Project>

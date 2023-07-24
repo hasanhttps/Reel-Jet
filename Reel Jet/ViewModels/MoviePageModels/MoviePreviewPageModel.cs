@@ -9,6 +9,7 @@ using Reel_Jet.Services.WebServices;
 using Reel_Jet.Models.MovieNamespace;
 using System.Runtime.CompilerServices;
 
+
 namespace Reel_Jet.ViewModels.MoviePageModels {
     public class MoviePreviewPageModel : INotifyPropertyChanged {
 
@@ -19,6 +20,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         // Binding Properties
 
+        public ICommand? VideoPlayerPageCommand { get; set; }
         public ICommand? MovieListPageCommand { get; set; }
         public string trailerLink { get; set; }
         public Movie Movie {
@@ -36,12 +38,17 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             trailerLink = "https://www.youtube.com/results?search_query=" + movie.Title + " trailer";
 
             MovieListPageCommand = new RelayCommand(MovieListPage);
+            VideoPlayerPageCommand = new RelayCommand(VideoPlayerPage);
         }
 
         // Functions
 
         private void MovieListPage(object? param) {
             MainFrame.Content = new MovieListPage(MainFrame);
+        }
+        
+        private void VideoPlayerPage(object? param) {
+            MainFrame.Content = new VideoPlayerPage(MainFrame, Movie.Title);
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

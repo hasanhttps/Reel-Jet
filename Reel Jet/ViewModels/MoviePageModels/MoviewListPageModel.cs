@@ -91,17 +91,6 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
                     if (movieFromCollection.Poster == "N/A")
                         movieFromCollection.Poster = "\\Static Files\\Images\\no-poster.png";
 
-                    if (movieFromCollection.Runtime == "N/A")
-                        movieFromCollection.Runtime = "Unknown";
-
-                    if (movieFromCollection.Rated == "N/A")
-                        movieFromCollection.Rated = "Unknown";
-
-                    if (movieFromCollection.Director == "N/A")
-                        movieFromCollection.Director = "Unknown";
-
-
-
                     if (movieFromCollection is not null)
                         Movies.Add(movieFromCollection);
                 }

@@ -14,6 +14,14 @@
           }
         }
       },
+      "HtmlAgilityPack/1.11.50": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.50.0",
+            "fileVersion": "1.11.50.0"
+          }
+        }
+      },
       "MaterialDesignColors/2.1.4": {
         "runtime": {
           "lib/net6.0/MaterialDesignColors.dll": {
@@ -227,6 +235,13 @@
       "sha512": "sha512-SXE080rnyWMm9Dt0BZzMxh89/o9teuSaqL1N+0O/XM/F/HU8JuZA4XaEKxjBigwZPHHU3/udTa0QMYCHkmH43Q==",
       "path": "fontawesome.wpf/4.7.0.9",
       "hashPath": "fontawesome.wpf.4.7.0.9.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.11.50": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lxxkDIykfX2HgMZZdmU8gT4vWQvOUjkCsCXmSRaAGuAofyzUjIjJFJHWeBXk+dJ9af0qXJyJ/Td7dBbWQpgM3Q==",
+      "path": "htmlagilitypack/1.11.50",
+      "hashPath": "htmlagilitypack.1.11.50.nupkg.sha512"
     },
     "MaterialDesignColors/2.1.4": {
       "type": "package",

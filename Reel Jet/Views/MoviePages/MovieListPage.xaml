@@ -41,7 +41,7 @@
 
             <Grid Grid.Row="1">
 
-                <ListView Margin="60 0 0 0" ItemsSource="{Binding Movies}" SelectedItem="{Binding MovieInfo, Mode=TwoWay}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListView Margin="60 0 0 0" ItemsSource="{Binding Movies}" SelectedItem="{Binding Movie, Mode=TwoWay}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -61,12 +61,12 @@
                                             <TextBlock Text="{Binding Runtime}"      Margin="0 0 0 0"  FontSize="11" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
                                         </StackPanel>
 
-                                        <WrapPanel Orientation="Horizontal" Margin="0 0 0 10">
+                                        <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
                                             <TextBlock Text="{Binding Title}" Margin="10 0 5 0" FontSize="13" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
                                             <TextBlock Text="(" FontSize="13" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
                                             <TextBlock Text="{Binding Year}" FontSize="13" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
                                             <TextBlock Text=")" FontSize="13" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
-                                        </WrapPanel>
+                                        </StackPanel>
 
                                         <Button Style="{StaticResource ButtonForWatchList}" Command="{Binding DataContext.AddToWatchListCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding}" Width="160" Height="30" Margin="0 0 0 7" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" HorizontalAlignment="Center" Foreground="#38b6ff"></Button>
 
