@@ -17,14 +17,14 @@
                                 <Grid>
                                     <Border
                                         CornerRadius="4"
-                                        Background="White"
-                                        />
+                                        Background="White" />
+                                    
                                     <TextBlock Margin="10 0 0 0" Text="{Binding ElementName=control, Path=PlaceHolder}" Foreground="#B8B8B8" VerticalAlignment="Center">
                                         <TextBlock.Style>
                                             <Style TargetType="TextBlock">
                                                 <Setter Property="Visibility" Value="Collapsed"/>
                                                 <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}" Value="">
+                                                    <DataTrigger Binding="{Binding ElementName=txtBox ,Path=Text}" Value="">
                                                         <Setter Property="Visibility" Value="Visible"/>
                                                     </DataTrigger>
                                                 </Style.Triggers>
@@ -33,14 +33,14 @@
                                     </TextBlock>
 
                                     <TextBox x:Name="txtBox"
+                                             Text="{Binding ElementName=control, Path=content, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                              Background="Transparent"
                                              Padding="0 4 0 2"
                                              Foreground="Black"
                                              BorderThickness="0"
                                              BorderBrush="Transparent"
                                              CaretBrush="Black"
-                                             VerticalContentAlignment="Center"
-                                             Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text, Mode=TwoWay}"/>
+                                             VerticalContentAlignment="Center"/>
                                 </Grid>
                             </ControlTemplate>
                         </Setter.Value>

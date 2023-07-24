@@ -15,8 +15,10 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         public static ObservableCollection<User> Users { get; set; }
         public static Dictionary<string, TextBlock> ErrorLabels { get; set; } = new();
 
+        public static User CurrentUser { get; set; } = new();
+
         // Constructor
-        
+
         static Database() {
             Users = ReadData<ObservableCollection<User>>("users");
             if (Users == null)
@@ -27,8 +29,10 @@ namespace Reel_Jet.Models.DatabaseNamespace {
 
         public static bool CheckUserExist(string email, string password) {
             foreach (var user in Users) {
-                if (user.Email == email && user.Password == password)
+                if (user.Email == email && user.Password == password) {
+                    CurrentUser = user;
                     return true;
+                }
             }
             return false;
 

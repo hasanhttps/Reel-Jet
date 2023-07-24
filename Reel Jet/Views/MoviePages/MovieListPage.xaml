@@ -17,61 +17,12 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0" Background="#12121A">
-            <Button Margin="0 60 0 0" VerticalAlignment="Top" Command="{Binding WatchListPgButtonCommand}">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource WatchListImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
 
-            <Button Margin="0 110 0 0" VerticalAlignment="Top"  Command="{Binding HistoryPgButtonCommand}">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource HistoryPageImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
+            <Button Margin="0 60 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationWatchListButton}" Command="{Binding WatchListPgButtonCommand}"/>
+            <Button Margin="0 110 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationHistoryButton}" Command="{Binding HistoryPgButtonCommand}"/>
+            <Button Margin="0 0 0 70" VerticalAlignment="Bottom" Style="{StaticResource NavigationSettingsButton}"/>
+            <Button Margin="0 0 0 20" VerticalAlignment="Bottom" Style="{StaticResource NavigationProfileButton}"/>
 
-            <Button Margin="0 0 0 70" VerticalAlignment="Bottom">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource SettingsPageImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
-
-            <Button Margin="0 0 0 20" VerticalAlignment="Bottom">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource MaleUserProfileImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
         </Grid>
 
         <Grid Grid.Column="1">
@@ -82,18 +33,57 @@
 
             <Grid Grid.Row="0">
                 <ut:SearchBox x:Name="SearchFilm" PlaceHolder="Search" Height="40" Width="500">
-                    <!--<ut:SearchBox.InputBindings>
-                        <KeyBinding Key="Enter" Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=SearchFilm, Path=}"/>
-                    </ut:SearchBox.InputBindings>-->
+                    <ut:SearchBox.InputBindings>
+                        <KeyBinding Key="Enter" Command="{Binding SearchCommand}" CommandParameter="{Binding ElementName=SearchFilm, Path=content}"/>
+                    </ut:SearchBox.InputBindings>
                 </ut:SearchBox>
             </Grid>
 
             <Grid Grid.Row="1">
-                <ListView ItemsSource="{Binding Movie.Search}" SelectedItem="{Binding MovieInfo, Mode=TwoWay}">
+
+                <ListView Margin="60 0 0 0" ItemsSource="{Binding Movies}" SelectedItem="{Binding MovieInfo, Mode=TwoWay}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Height="100" Width="100">
-                                <Image Source="{Binding Poster}" Height="100" Width="100"/>
+                            <StackPanel Width="206" Margin="15" Background="#12121A" >
+                                <Image Source="{Binding Poster}" MaxWidth="206" Height="300"/>
+                                <Border Background="#1a1a1a" Width="206" Height="120"  VerticalAlignment="Bottom">
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="0 5 0 5">
+                                            <Image Source="{StaticResource StarImg}" Margin="10 0 10 0" Width="10" Height="10"></Image>
+                                            <TextBlock Text="{Binding imdbRating}"   Margin="0 0 110 0"  FontSize="11" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
+                                            <TextBlock Text="{Binding Runtime}"      Margin="0 0 0 0"  FontSize="11" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
+                                        </StackPanel>
+
+                                        <WrapPanel Orientation="Horizontal" Margin="0 0 0 10">
+                                            <TextBlock Text="{Binding Title}" Margin="10 0 5 0" FontSize="13" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
+                                            <TextBlock Text="(" FontSize="13" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
+                                            <TextBlock Text="{Binding Year}" FontSize="13" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
+                                            <TextBlock Text=")" FontSize="13" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
+                                        </WrapPanel>
+
+                                        <Button Style="{StaticResource ButtonForWatchList}" Command="{Binding DataContext.AddToWatchListCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding}" Width="160" Height="30" Margin="0 0 0 7" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" HorizontalAlignment="Center" Foreground="#38b6ff"></Button>
+
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{StaticResource PlayImg}" Width="20" Height="20" Margin="10 0 5 0"></Image>
+                                            <TextBlock Text="Trailer" FontSize="11" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Margin="0 3 110 0"></TextBlock>
+                                            <Image Source="{StaticResource InfoImg}" Width="20" Height="20">
+                                                <Image.ToolTip>
+                                                    <ToolTip Style="{StaticResource CustomToolTipStyle}" Placement="Mouse" MaxWidth="400">
+                                                        <TextBlock TextWrapping="Wrap" FontSize="10" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Background="#12121A"  Foreground="White" Padding="5" Text="{Binding Plot}"/>
+                                                    </ToolTip>
+                                                </Image.ToolTip>
+                                            </Image>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                </Border>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>

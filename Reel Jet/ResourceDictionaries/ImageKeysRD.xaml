@@ -11,4 +11,9 @@
     <BitmapImage x:Key="MovieImg" UriSource="\Static Files\Images\MovieIcon.png"/>
     <BitmapImage x:Key="StarImg" UriSource="\Static Files\Images\star.png"/>
     <BitmapImage x:Key="LockImg" UriSource="\Static Files\Images\lock.png"/>
+    <BitmapImage x:Key="NoPosterImg" UriSource="\Static Files\Images\no-poster.png"/>
+    <BitmapImage x:Key="PlusImg" UriSource="\Static Files\Images\plus.png"/>
+    <BitmapImage x:Key="PlayImg" UriSource="\Static Files\Images\play.png"/>
+    <BitmapImage x:Key="InfoImg" UriSource="\Static Files\Images\info.png"/>
+    <BitmapImage x:Key="AddedImg" UriSource="\Static Files\Images\added.png"/>
 </ResourceDictionary>

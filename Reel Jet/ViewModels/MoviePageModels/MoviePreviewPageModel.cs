@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Windows;
+using Reel_Jet.Commands;
+using System.Windows.Input;
 using System.ComponentModel;
 using System.Windows.Controls;
+using Reel_Jet.Views.MoviePages;
 using Reel_Jet.Services.WebServices;
-using System.Runtime.CompilerServices;
 using Reel_Jet.Models.MovieNamespace;
-
+using System.Runtime.CompilerServices;
 
 namespace Reel_Jet.ViewModels.MoviePageModels {
     public class MoviePreviewPageModel : INotifyPropertyChanged {
@@ -12,45 +15,38 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         // Private Fields
 
         private Frame MainFrame;
-        private ShortMovieInfo _movieInfo;
         private Movie _movie;
 
         // Binding Properties
 
+        public ICommand? MovieListPageCommand { get; set; }
         public string trailerLink { get; set; }
         public Movie Movie {
             get => _movie;
             set {
                 _movie = value;
-                OnPropertyChanged();
-            }
-        }
-        public ShortMovieInfo MovieInfo { 
-            get => _movieInfo;
-            set {
-                _movieInfo = value;
             }
         }
 
         // Constructor
 
-        public MoviePreviewPageModel(Frame frame, ShortMovieInfo movieInfo) { 
+        public MoviePreviewPageModel(Frame frame, Movie movie) { 
             MainFrame = frame;
-            MovieInfo = movieInfo;
-            ChangeShortMovieFul();
-            trailerLink = "https://www.youtube.com/results?search_query=" + movieInfo.Title + " trailer";
+            Movie = movie;
+            trailerLink = "https://www.youtube.com/results?search_query=" + movie.Title + " trailer";
+
+            MovieListPageCommand = new RelayCommand(MovieListPage);
         }
 
         // Functions
 
-        private async void ChangeShortMovieFul() {
-            var jsonStr = await OmdbService.GetConcreteMovieById(MovieInfo.imdbID);
-            Movie = System.Text.Json.JsonSerializer.Deserialize<Movie>(jsonStr);
+        private void MovieListPage(object? param) {
+            MainFrame.Content = new MovieListPage(MainFrame);
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        private void OnPropertyChanged([CallerMemberName] string? propertyName = null) { 
+        public void OnPropertyChanged([CallerMemberName] string? propertyName = null) { 
             PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }

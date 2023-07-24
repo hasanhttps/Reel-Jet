@@ -17,61 +17,13 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0" Background="#12121A">
-            <Button Margin="0 60 0 0" VerticalAlignment="Top">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource WatchListImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
-
-            <Button Margin="0 110 0 0" VerticalAlignment="Top">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource HistoryPageImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
-
-            <Button Margin="0 0 0 70" VerticalAlignment="Bottom">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource SettingsPageImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
-
-            <Button Margin="0 0 0 20" VerticalAlignment="Bottom">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource MaleUserProfileImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
+            
+            <Button Margin="0 60 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationWatchListButton}"/>
+            <Button Margin="0 110 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationHistoryButton}"/>
+            <Button Margin="0 160 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationMovieListButton}" Command="{Binding MovieListPageCommand}"/>
+            <Button Margin="0 0 0 70" VerticalAlignment="Bottom" Style="{StaticResource NavigationSettingsButton}"/>
+            <Button Margin="0 0 0 20" VerticalAlignment="Bottom" Style="{StaticResource NavigationProfileButton}"/>
+            
         </Grid>
 
         <Grid Grid.Column="1">
@@ -109,7 +61,7 @@
                 </Grid>
                 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Height="530">
-                    <Image Name="Poster" Source="{Binding MovieInfo.Poster}" Height="530" Width="359"/>
+                    <Image Name="Poster" Source="{Binding Movie.Poster}" Height="530" Width="359"/>
                     <wv2:WebView2 Source="{Binding trailerLink}" Height="530" Width="1012" VerticalAlignment="Top" Margin="10 0 0 0"/>
                 </StackPanel>
 

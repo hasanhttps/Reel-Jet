@@ -9,7 +9,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RegistrationCodePage">
-    
+
     <Page.Resources>
         <ControlTemplate x:Key="OvaleTextBoxTemplate" TargetType="{x:Type TextBox}">
             <Grid>
@@ -18,9 +18,7 @@
                 <!-- TextBox to accept one letter -->
                 <TextBox Text="{Binding Path=Text, RelativeSource={RelativeSource TemplatedParent}}"
                          HorizontalContentAlignment="Center"
-                         VerticalContentAlignment="Center"
-                         MaxLength="1"
-                         />
+                         VerticalContentAlignment="Center"/>
             </Grid>
         </ControlTemplate>
     </Page.Resources>
@@ -35,7 +33,7 @@
             <TextBlock Text="Authenticate Your Account" FontSize="30" Margin="0 10 0 0" HorizontalAlignment="Center" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" FontWeight="Bold"></TextBlock>
             <TextBlock Text="Enter the authorization code sent to your e-mail" FontSize="12" Margin="0 10 0 30" HorizontalAlignment="Center" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand"></TextBlock>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 45">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 30">
                 <TextBox  Text="{Binding RegCodeNumber1}" Template="{StaticResource OvaleTextBoxTemplate}" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" FontWeight="Bold" FontSize="14" Margin="0 0 10 0" ></TextBox>
                 <TextBox  Text="{Binding RegCodeNumber2}" Template="{StaticResource OvaleTextBoxTemplate}" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" FontWeight="Bold" FontSize="14" Margin="0 0 10 0" ></TextBox>
                 <TextBox  Text="{Binding RegCodeNumber3}" Template="{StaticResource OvaleTextBoxTemplate}" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" FontWeight="Bold" FontSize="14" Margin="0 0 10 0" ></TextBox>
@@ -44,6 +42,7 @@
                 <TextBox  Text="{Binding RegCodeNumber6}" Template="{StaticResource OvaleTextBoxTemplate}" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" FontWeight="Bold" FontSize="14" Margin="0 0 10 0" ></TextBox>
             </StackPanel>
 
+            <TextBlock Text="{Binding TimerText}" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Margin="0 0 0 20"/>
             <Button FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Content="Confirm" Width="300" Height="35" FontSize="15" Foreground="White" Command="{Binding ConfirmCommand}"/>
 
         </StackPanel>

@@ -7,9 +7,11 @@ using System.Windows.Controls;
 using System.Runtime.CompilerServices;
 using Reel_Jet.Models.DatabaseNamespace;
 using Reel_Jet.Views.RegistrationPages.SignUpPages;
+using Reel_Jet.Services.WebServices;
 
 namespace Reel_Jet.ViewModels.RegistrationPageModels.SignUpPageModels {
     public class RegistrationPageModel {
+
         // Private Fields
 
         private Frame MainFrame;
@@ -27,7 +29,6 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels.SignUpPageModels {
             }
         }
 
-
         // Constructor
 
         public RegistrationPageModel(Frame frame, Frame frame2) {
@@ -39,16 +40,16 @@ namespace Reel_Jet.ViewModels.RegistrationPageModels.SignUpPageModels {
         // Functions
 
         public void SignUp(object? param) {
+
             if (!string.IsNullOrEmpty(newUser.Name) && !string.IsNullOrEmpty(newUser.Surname) && newUser.Age != null && !string.IsNullOrEmpty(newUser.Username) && !string.IsNullOrEmpty(newUser.PhoneNumber) && !string.IsNullOrEmpty(newUser.Password) && !string.IsNullOrEmpty(ConfirmPassword)) {
 
-                if (ConfirmPassword == newUser.Password)
-                    RegistrationFrame.Content = new ValidationPage(MainFrame, newUser);
+                if (ConfirmPassword == newUser.Password) 
+                    RegistrationFrame.Content = new ValidationPage(MainFrame,newUser);
                 else
                     MessageBox.Show("Wrong Password Confirmation,Try Again", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
                 MessageBox.Show("Fill all the required fields,Try Again", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-
         }
 
         // Property Changed

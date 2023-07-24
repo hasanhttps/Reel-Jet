@@ -3,6 +3,8 @@ using System.Windows;
 using System.Text.RegularExpressions;
 using Reel_Jet.Services.InterfaceServices;
 using static Reel_Jet.Models.DatabaseNamespace.Database;
+using System.Collections.ObjectModel;
+using Reel_Jet.Models.MovieNamespace;
 
 #nullable disable
 
@@ -47,7 +49,7 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         public string Username {
             get { return _username; }
             set { 
-                if (!Regex.IsMatch(value, "^[a-z0-9_-]{3,15}$")) 
+                if (!Regex.IsMatch(value, "^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$")) 
                     MessageBox.Show("Invalid Username", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 else
                     _username = value; OnProperty();
@@ -63,6 +65,7 @@ namespace Reel_Jet.Models.DatabaseNamespace {
             }
         }
 
+        public ObservableCollection<Movie> MyWatchList { get; set; } = new();
 
         // Functions
 
@@ -75,13 +78,17 @@ namespace Reel_Jet.Models.DatabaseNamespace {
             // database-dan silme
         }
 
-        public void SignUp(User newUser) {
+        public bool SignUp(User newUser) {
             if (!CheckUserExist(newUser.Email,newUser.Password)) {
-                Database.Users.Add(newUser);
-                JsonHandling.WriteData(Database.Users, "users");
+                CurrentUser = newUser;
+                Users.Add(newUser);
+                JsonHandling.WriteData(Users, "users");
+                return true;
             }
-            else
+            else {
                 MessageBox.Show("This email is already in use","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+                return false;
+            }
         }
         
     }

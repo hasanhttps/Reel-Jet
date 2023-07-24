@@ -16,61 +16,12 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0" Background="#12121A">
-            <Button Margin="0 60 0 0" VerticalAlignment="Top" Command="{Binding WatchListPgButtonCommand}">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource WatchListImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
 
-            <Button Margin="0 110 0 0" VerticalAlignment="Top" Command="{Binding MoviePgButtonCommand}">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource MovieImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
+            <Button Margin="0 60 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationWatchListButton}"/>
+            <Button Margin="0 110 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationMovieListButton}"/>
+            <Button Margin="0 0 0 70" VerticalAlignment="Bottom" Style="{StaticResource NavigationSettingsButton}"/>
+            <Button Margin="0 0 0 20" VerticalAlignment="Bottom" Style="{StaticResource NavigationProfileButton}"/>
 
-            <Button Margin="0 0 0 70" VerticalAlignment="Bottom">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource SettingsPageImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
-
-            <Button Margin="0 0 0 20" VerticalAlignment="Bottom">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Image Source="{StaticResource MaleUserProfileImg}" Height="25" Width="25"/>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
         </Grid>
 
         <Grid Grid.Column="1">

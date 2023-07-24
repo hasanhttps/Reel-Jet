@@ -5,6 +5,88 @@
     "Age": 16,
     "Username": "hasanhttps",
     "PhoneNumber": "050-335-65-02",
+    "MyWatchList": [
+      {
+        "Title": "Fight Club",
+        "Year": "1999",
+        "Rated": "R",
+        "Released": "15 Oct 1999",
+        "Runtime": "139 min",
+        "Genre": "Drama",
+        "Director": "David Fincher",
+        "Writer": "Chuck Palahniuk, Jim Uhls",
+        "Actors": "Brad Pitt, Edward Norton, Meat Loaf",
+        "Plot": "A nameless first person narrator (Edward Norton) attends support groups in attempt to subdue his emotional state and relieve his insomniac state. When he meets Marla (Helena Bonham Carter), another fake attendee of support groups, his life seems to become a little more bearable. However when he associates himself with Tyler (Brad Pitt) he is dragged into an underground fight club and soap making scheme. Together the two men spiral out of control and engage in competitive rivalry for love and power.",
+        "Language": "English",
+        "Country": "Germany, United States",
+        "Awards": "Nominated for 1 Oscar. 12 wins \u0026 38 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "79%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "66/100"
+          }
+        ],
+        "Metascore": "66",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,194,869",
+        "imdbID": "tt0137523",
+        "Type": "movie",
+        "DVD": "14 Oct 2003",
+        "BoxOffice": "$37,030,102",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Spider-Man: Across the Spider-Verse",
+        "Year": "2023",
+        "Rated": "PG",
+        "Released": "02 Jun 2023",
+        "Runtime": "140 min",
+        "Genre": "Animation, Action, Adventure",
+        "Director": "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson",
+        "Writer": "Phil Lord, Christopher Miller, Dave Callaham",
+        "Actors": "Shameik Moore, Hailee Steinfeld, Brian Tyree Henry",
+        "Plot": "Miles Morales returns for the next chapter of the Oscar\u00AE-winning Spider-Verse saga, an epic adventure that will transport Brooklyn\u0027s full-time, friendly neighborhood Spider-Man across the Multiverse to join forces with Gwen Stacy and a new team of Spider-People to face off with a villain more powerful than anything they have ever encountered.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "2 wins \u0026 1 nomination",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "96%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "86/100"
+          }
+        ],
+        "Metascore": "86",
+        "imdbRating": "8.9",
+        "imdbVotes": "174,379",
+        "imdbID": "tt9362722",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$351,963,302",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
     "Email": "hasanabdullazad@gmail.com",
     "Password": "2000Hasan"
   }

@@ -19,7 +19,7 @@ namespace Reel_Jet.Utilities {
             get { return (string)GetValue(PlaceHolderProperty); }
             set { SetValue(PlaceHolderProperty, value); }
         }
-        public string Content {
+        public string content {
             get { return (string)GetValue(TextProperty); }
             set { SetValue(TextProperty, value); }
         }
@@ -31,7 +31,7 @@ namespace Reel_Jet.Utilities {
 
         // Using a DependencyProperty as the backing store for PlaceHolder.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextProperty =
-            DependencyProperty.Register("Content", typeof(string), typeof(SearchBox));
+            DependencyProperty.Register("content", typeof(string), typeof(SearchBox));
 
     }
 }

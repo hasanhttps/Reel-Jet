@@ -14,8 +14,7 @@ namespace Reel_Jet.Views.RegistrationPages.SignUpPages {
             DataContext = new RegistrationPageModel(MainFrame, frame2);
         }
 
-        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
-        {
+        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e) {
             MainFrame.Content = new LoginPage(MainFrame);
         }
     }

@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 
 namespace Reel_Jet.Services.InterfaceServices {
     public interface IAuthSignUpService {
-        void SignUp(User newUser);
+        bool SignUp(User newUser);
     }
 }

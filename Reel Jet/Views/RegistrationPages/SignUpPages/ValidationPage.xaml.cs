@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Controls;
 using Reel_Jet.Models.DatabaseNamespace;
 using Reel_Jet.ViewModels.RegistrationPageModels.SignUpPageModels;
