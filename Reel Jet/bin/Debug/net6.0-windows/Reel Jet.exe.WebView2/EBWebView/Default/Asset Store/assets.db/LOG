@@ -1,2 +1,5 @@
-2023/07/20-20:25:02.561 7aa0 Creating DB C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Asset Store\assets.db since it was missing.
-2023/07/20-20:25:02.581 7aa0 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Asset Store\assets.db/MANIFEST-000001
+2023/07/26-14:44:13.864 2ca8 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Asset Store\assets.db/MANIFEST-000001
+2023/07/26-14:44:13.866 2ca8 Recovering log #3
+2023/07/26-14:44:13.883 2ca8 Level-0 table #3: started
+2023/07/26-14:44:13.895 2ca8 Level-0 table #3: 378990 bytes OK
+2023/07/26-14:44:13.904 2ca8 Delete type=0 #3

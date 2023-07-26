@@ -20,6 +20,7 @@ namespace Reel_Jet.ViewModels.NavigationBarPageModels {
 
         public ObservableCollection<Movie> History { get; set; } = CurrentUser.HistoryList; 
         public ICommand? WatchListPgButtonCommand { get; set; }
+        public ICommand? SelectionChangedCommand { get; set; }
         public ICommand? MoviePgButtonCommand { get; set; }
 
         // Constructor
@@ -28,9 +29,15 @@ namespace Reel_Jet.ViewModels.NavigationBarPageModels {
             MainFrame = frame;
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             MoviePgButtonCommand = new RelayCommand(MovieListPage);
+            SelectionChangedCommand = new RelayCommand(SelectionChanged);
         }
 
         // Functions
+
+        private void SelectionChanged(object? param) {
+            Movie movie = (Movie)param!;
+            MainFrame.Content = new VideoPlayerPage(MainFrame, movie.Title);
+        }
 
         private void WatchListPage(object? sender) {
             MainFrame.Content = new WatchListPage(MainFrame);

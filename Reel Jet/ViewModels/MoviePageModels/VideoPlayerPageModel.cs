@@ -2,10 +2,15 @@
 using System.Windows;
 using System.Net.Http;
 using HtmlAgilityPack;
+using Reel_Jet.Commands;
+using System.Windows.Input;
 using System.ComponentModel;
 using System.Windows.Controls;
+using Reel_Jet.Views.MoviePages;
 using Microsoft.Web.WebView2.Wpf;
 using System.Runtime.CompilerServices;
+using Reel_Jet.Views.NavigationBarPages;
+
 
 namespace Reel_Jet.ViewModels.MoviePageModels {
     class VideoPlayerPageModel : INotifyPropertyChanged {
@@ -19,6 +24,8 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         // Binding Properties
 
+        public ICommand? HistoryPgButtonCommand { get; set; }
+        public ICommand? WatchListPgButtonCommand { get; set; }
         public string VideoUrl {
             get => _videoUrl;
             set {
@@ -31,12 +38,23 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         public VideoPlayerPageModel(Frame frame, string title, WebView2 player) {
             MainFrame = frame;
             Player = player;
+
+            HistoryPgButtonCommand = new RelayCommand(HistoryPage);
+            WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             SearchAlgorithm(title);
             if (!CheckMovieExist())
                 MessageBox.Show("Video not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         // Functions
+
+        private void HistoryPage(object? sender) {
+            MainFrame.Content = new HistoryPage(MainFrame);
+        }
+
+        private void WatchListPage(object? sender) {
+            MainFrame.Content = new WatchListPage(MainFrame);
+        }
 
         private bool CheckMovieExist() {
             if (ScrapeFullFilmIzleNet()) return true;

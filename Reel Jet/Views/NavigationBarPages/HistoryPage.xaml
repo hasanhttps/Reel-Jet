@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:ut="clr-namespace:Reel_Jet.Utilities"
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
       xmlns:local="clr-namespace:Reel_Jet.Views.MoviePages"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920" Background="#1F1F2B"
@@ -17,8 +18,8 @@
 
         <Grid Grid.Column="0" Background="#12121A">
 
-            <Button Margin="0 60 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationWatchListButton}"/>
-            <Button Margin="0 110 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationMovieListButton}"/>
+            <Button Margin="0 60 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationWatchListButton}" Command="{Binding WatchListPgButtonCommand}"/>
+            <Button Margin="0 110 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationMovieListButton}" Command="{Binding MoviePgButtonCommand}"/>
             <Button Margin="0 0 0 70" VerticalAlignment="Bottom" Style="{StaticResource NavigationSettingsButton}"/>
             <Button Margin="0 0 0 20" VerticalAlignment="Bottom" Style="{StaticResource NavigationProfileButton}"/>
 
@@ -64,6 +65,14 @@
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
+
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}" 
+                                   CommandParameter="{Binding SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+
                 </ListView>
             </Grid>
 
