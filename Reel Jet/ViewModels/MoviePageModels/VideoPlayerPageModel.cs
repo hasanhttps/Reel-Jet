@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Windows.Controls;
 using Reel_Jet.Views.MoviePages;
 using Microsoft.Web.WebView2.Wpf;
+using Microsoft.Web.WebView2.Core;
 using System.Runtime.CompilerServices;
 using Reel_Jet.Views.NavigationBarPages;
 
@@ -19,13 +20,14 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         private Frame MainFrame;
         private WebView2 Player;
-        private string _videoUrl;
-        private string _search;
+        private string? _videoUrl;
+        private string? _search;
 
         // Binding Properties
 
-        public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? WatchListPgButtonCommand { get; set; }
+        public ICommand? FullScreenButtonCommand { get; set; }
+        public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? MovieListPageCommand { get; set; }
         public string VideoUrl {
@@ -38,16 +40,23 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         // Constructor
 
         public VideoPlayerPageModel(Frame frame, string title, WebView2 player) {
+
             MainFrame = frame;
             Player = player;
+
+            // It is blocking ads from webview2 for opening new window
+            WebView2_CoreWebView2InitializationCompleted();
 
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             HistoryPgButtonCommand = new RelayCommand(HistoryPage);
             MovieListPageCommand = new RelayCommand(MovieListPage);
             ProfilePgButtonCommand = new RelayCommand(ProfilePage);
+            FullScreenButtonCommand = new RelayCommand(FullScreenPage);
+
             SearchAlgorithm(title);
             if (!CheckMovieExist())
                 MessageBox.Show("Video not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
         }
 
 
@@ -68,6 +77,25 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         private void ProfilePage(object? sender) {
             MainFrame.Content = new UserAccountPage(MainFrame);
+        }
+
+        private void FullScreenPage(object? sender) {
+            MessageBox.Show("Fullscreen");
+        }
+
+        private void WebView2_CoreWebView2InitializationCompleted() {
+            if (Player != null && Player.CoreWebView2 != null) {
+                // Get the CoreWebView2 instance from the WebView2 control
+                CoreWebView2 coreWebView2 = Player.CoreWebView2;
+
+                // Handle the NewWindowRequested event
+                coreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested;
+            }
+        }
+
+        private void CoreWebView2_NewWindowRequested(object sender, CoreWebView2NewWindowRequestedEventArgs e) {
+            // Cancel the new window request
+            e.Handled = true;
         }
 
         private bool CheckMovieExist() {

@@ -10,7 +10,7 @@
     
     <Grid>
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden">
-
+            
         </Frame>
     </Grid>
 </Window>

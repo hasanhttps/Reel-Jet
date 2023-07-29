@@ -5,7 +5,6 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Windows.Controls;
 using Reel_Jet.Views.MoviePages;
-using System.Collections.Generic;
 using Reel_Jet.Services.WebServices;
 using System.Collections.ObjectModel;
 using Reel_Jet.Models.MovieNamespace;
@@ -25,10 +24,11 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         // Binding Properties
 
-        public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? WatchListPgButtonCommand { get; set; }
-        public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? SelectionChangedCommand { get; set; }
+        public ICommand? SettingsPgButtonCommand { get; set; }
+        public ICommand? HistoryPgButtonCommand { get; set; }
+        public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? SearchCommand { get; set; }
         public ICommand? AddToWatchListCommand { get; set; }
         public MovieCollection Movie {
@@ -48,6 +48,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             SelectionChangedCommand = new RelayCommand(SelectionChanged);
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             AddToWatchListCommand = new RelayCommand(AddToWatchList);
+            SettingsPgButtonCommand = new RelayCommand(SettingsPage);
             HistoryPgButtonCommand = new RelayCommand(HistoryPage);
             ProfilePgButtonCommand = new RelayCommand(ProfilePage);
             SearchCommand = new RelayCommand(Search);
@@ -62,9 +63,11 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         private void WatchListPage(object? sender) {
             MainFrame.Content = new WatchListPage(MainFrame);
         }
-
         private void ProfilePage(object? sender) {
             MainFrame.Content = new UserAccountPage(MainFrame);
+        }
+        private void SettingsPage(object? sender) {
+            MainFrame.Content = new SettingsPage(MainFrame);
         }
 
         private void AddToWatchList(object? sender) {

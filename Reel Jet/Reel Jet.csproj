@@ -15,6 +15,7 @@
     <None Remove="Static Files\Fonts\QuickSand\Quicksand-Regular.ttf" />
     <None Remove="Static Files\Fonts\QuickSand\Quicksand-SemiBold.ttf" />
     <None Remove="Static Files\Fonts\Sonny Gothic\SonnyGothic-UltraBlack.ttf" />
+    <None Remove="Static Files\Images\account.png" />
     <None Remove="Static Files\Images\added.png" />
     <None Remove="Static Files\Images\cog.png" />
     <None Remove="Static Files\Images\edit.png" />
@@ -57,6 +58,7 @@
     <Resource Include="Static Files\Fonts\Sonny Gothic\SonnyGothic-UltraBlack.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Static Files\Images\account.png" />
     <Resource Include="Static Files\Images\added.png" />
     <Resource Include="Static Files\Images\cog.png" />
     <Resource Include="Static Files\Images\edit.png" />
