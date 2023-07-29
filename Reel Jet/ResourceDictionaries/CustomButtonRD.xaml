@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:database="clr-namespace:Reel_Jet.Models.DatabaseNamespace">
 
     <Style TargetType="Button">
         <Setter Property="Template">
@@ -114,7 +115,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Image Source="{StaticResource MaleUserProfileImg}" Height="25" Width="25"/>
+                    <Border Height="25" Width="25" CornerRadius="150">
+                        <Border.Background >
+                            <ImageBrush ImageSource="{Binding Avatar,Source={x:Static database:Database.CurrentUser},UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Stretch="UniformToFill"/>
+                        </Border.Background>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -133,7 +138,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-
     </Style>
 
 </ResourceDictionary>

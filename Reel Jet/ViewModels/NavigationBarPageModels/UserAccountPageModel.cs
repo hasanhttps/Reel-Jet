@@ -5,7 +5,6 @@ using Reel_Jet.Commands;
 using System.Windows.Input;
 using System.Windows.Controls;
 using Reel_Jet.Views.MoviePages;
-using System.Windows.Media.Imaging;
 using Reel_Jet.Views.NavigationBarPages;
 using Reel_Jet.Models.DatabaseNamespace;
 
@@ -17,12 +16,10 @@ namespace Reel_Jet.ViewModels.NavigationBarPageModels {
         // Private Fields
 
         private Frame MainFrame;
-
         
         // Binding Properties
 
-
-        public User EditedUser { get; set; } = Database.CurrentUser;
+        public User EditedUser { get; set; } = new();
         public ICommand WatchListPgButtonCommand { get; set; }
         public ICommand ConfirmChangeCommand { get; set; }
         public ICommand MoviePgButtonCommand { get; set; }
@@ -34,7 +31,21 @@ namespace Reel_Jet.ViewModels.NavigationBarPageModels {
 
 
         public UserAccountPageModel(Frame frame) {
+
+            EditedUser.Avatar      = Database.CurrentUser.Avatar;
+            EditedUser.Name        = Database.CurrentUser.Name;
+            EditedUser.Surname     = Database.CurrentUser.Surname;
+            EditedUser.Age         = Database.CurrentUser.Age;
+            EditedUser.Username    = Database.CurrentUser.Username;
+            EditedUser.PhoneNumber = Database.CurrentUser.PhoneNumber;
+            EditedUser.Email       = Database.CurrentUser.Email;
+            EditedUser.Password    = Database.CurrentUser.Password;
+
+
             MainFrame = frame;
+            
+            
+            
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             HistoryPgCommand = new RelayCommand(HistoryPage);
             MoviePgButtonCommand = new RelayCommand(MovieListPage);
@@ -54,7 +65,22 @@ namespace Reel_Jet.ViewModels.NavigationBarPageModels {
         }
 
         private void ConfirmChange(object? sender) {
-            MessageBox.Show("Changes have been saved", "Saving", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (string.IsNullOrEmpty(EditedUser.Name) 
+                || string.IsNullOrEmpty(EditedUser.Surname) 
+                || EditedUser.Age == null 
+                || string.IsNullOrEmpty(EditedUser.Username) 
+                || string.IsNullOrEmpty(EditedUser.PhoneNumber) 
+                || string.IsNullOrEmpty(EditedUser.Password)) MessageBox.Show("Fill all the required fields,Try Again", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            else {
+                 Database.CurrentUser.Avatar      = EditedUser.Avatar      ;
+                 Database.CurrentUser.Name        = EditedUser.Name        ;
+                 Database.CurrentUser.Surname     = EditedUser.Surname     ;
+                 Database.CurrentUser.Age         = EditedUser.Age         ;
+                 Database.CurrentUser.Username    = EditedUser.Username    ;
+                 Database.CurrentUser.PhoneNumber = EditedUser.PhoneNumber ;
+                 Database.CurrentUser.Password    = EditedUser.Password    ;
+                 JsonHandling.WriteData(Database.Users, "users");
+            }
         }
 
         private void MovieListPage(object? sender) {
