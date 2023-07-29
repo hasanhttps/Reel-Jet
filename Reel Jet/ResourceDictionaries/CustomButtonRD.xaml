@@ -23,6 +23,28 @@
         </Setter>
     </Style>
 
+    <Style TargetType="Button" x:Key="EditButtonForAccount">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Border x:Name="buttonborder" Width="30" Height="30" Background="#f44336" CornerRadius="150">
+                            <Image Source="{StaticResource EditImg}" Width="15" Height="15" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"></Image>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonborder" Property="Background" Value="#eb5a50" />
+                        </Trigger>
+                        <Trigger Property="IsMouseCaptured" Value="True">
+                            <Setter TargetName="buttonborder" Property="Background" Value="#bf716b" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style TargetType="Button" x:Key="ButtonForWatchList">
         <Setter Property="Template">
             <Setter.Value>

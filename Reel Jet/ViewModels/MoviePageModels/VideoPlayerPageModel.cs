@@ -26,11 +26,13 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? WatchListPgButtonCommand { get; set; }
+        public ICommand? ProfilePgButtonCommand { get; set; }
+        public ICommand? MovieListPageCommand { get; set; }
         public string VideoUrl {
             get => _videoUrl;
             set {
                 _videoUrl = value;
-            }
+            } 
         }
 
         // Constructor
@@ -39,14 +41,18 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             MainFrame = frame;
             Player = player;
 
-            HistoryPgButtonCommand = new RelayCommand(HistoryPage);
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
+            HistoryPgButtonCommand = new RelayCommand(HistoryPage);
+            MovieListPageCommand = new RelayCommand(MovieListPage);
+            ProfilePgButtonCommand = new RelayCommand(ProfilePage);
             SearchAlgorithm(title);
             if (!CheckMovieExist())
                 MessageBox.Show("Video not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
+
         // Functions
+
 
         private void HistoryPage(object? sender) {
             MainFrame.Content = new HistoryPage(MainFrame);
@@ -54,6 +60,14 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         private void WatchListPage(object? sender) {
             MainFrame.Content = new WatchListPage(MainFrame);
+        }
+
+        private void MovieListPage(object? sender) {
+            MainFrame.Content = new MovieListPage(MainFrame);
+        }
+
+        private void ProfilePage(object? sender) {
+            MainFrame.Content = new UserAccountPage(MainFrame);
         }
 
         private bool CheckMovieExist() {
@@ -80,6 +94,9 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
             if (scr2.Value.Substring(0, 5) == "https") VideoUrl = scr2.Value;
             else VideoUrl = "https:" + scr2.Value;
+
+            if (VideoUrl.Contains("youtube.com"))
+                throw new Exception("Trailer Link");
         }
 
         private string? FindVideoLink(string searchlink, Predicate<HtmlNode> checkvideolink) {
@@ -146,6 +163,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         private bool CheckVideoLinkFullFilmIzleNet(HtmlNode node) {
             return node.Attributes["href"]!.Value.Contains("-izle/");
         }
+
 
 
         // INotifyPropertyChanged

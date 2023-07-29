@@ -14,31 +14,40 @@ namespace Reel_Jet.Models.DatabaseNamespace {
 
         // Private Fields
 
-		private string _name;
+        private string _name;
         private string _surname;
         private string _username;
         private string _phone;
+        private string _avatar;
         private int? _age;
 
-        // Properties
+
+        // Binding Properties
 
 
-		public string Name {
-			get { return _name; }
-			set { 
-                _name = value; OnProperty();
-            }
-		}
-
-        public string Surname {
-            get { return _surname; }
+        public string Avatar {
+            get => _avatar;
             set {
-                 _surname = value; OnProperty(); 
+                _avatar = value; OnProperty();
             }
         }
-		public int? Age {
-			get { return _age; }
-			set { 
+
+        public string Name {
+            get => _name;
+            set {
+                _name = value; OnProperty();
+            }
+        }
+
+        public string Surname {
+            get => _surname;
+            set {
+                _surname = value; OnProperty();
+            }
+        }
+        public int? Age {
+            get => _age;
+            set {
                 if (value < 6)
                     MessageBox.Show("Invalid Age", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 else
@@ -47,9 +56,9 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         }
 
         public string Username {
-            get { return _username; }
-            set { 
-                if (!Regex.IsMatch(value, "^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$")) 
+            get => _username;
+            set {
+                if (!Regex.IsMatch(value, "^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$"))
                     MessageBox.Show("Invalid Username", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 else
                     _username = value; OnProperty();
@@ -57,9 +66,9 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         }
 
         public string PhoneNumber {
-            get { return _phone; }
+            get => _phone;
             set {
-                if (!Regex.IsMatch(value!, "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{2}[-\\s\\.]?[0-9]{2}$")) 
+                if (!Regex.IsMatch(value!, "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{2}[-\\s\\.]?[0-9]{2}$"))
                     MessageBox.Show("Invalid Phone Number", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 _phone = value;
             }
@@ -68,9 +77,10 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         public ObservableCollection<Movie> MyWatchList { get; set; } = new();
         public ObservableCollection<Movie> HistoryList { get; set; } = new();
 
+
         // Functions
 
-        public bool LogIn(string email,string password) {
+        public bool LogIn(string email, string password) {
             if (CheckUserExist(email, password)) return true;
             return false;
         }
@@ -80,17 +90,18 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         }
 
         public bool SignUp(User newUser) {
-            if (!CheckUserExist(newUser.Email,newUser.Password)) {
+            if (!CheckUserExist(newUser.Email, newUser.Password)) {
+                newUser.Avatar = "\\Static Files\\Images\\MaleUserProfile.png";
                 CurrentUser = newUser;
                 Users.Add(newUser);
+
                 JsonHandling.WriteData(Users, "users");
                 return true;
             }
             else {
-                MessageBox.Show("This email is already in use","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show("This email is already in use", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
         }
-        
     }
 }

@@ -77,3 +77,5 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\FontAweso
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\HtmlAgilityPack.dll
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\VideoPlayerPage.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\VideoPlayerPage.baml
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\NavigationBarPages\UserAccountPage.g.cs
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\NavigationBarPages\UserAccountPage.baml

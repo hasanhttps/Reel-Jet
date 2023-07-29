@@ -19,6 +19,9 @@
     <Compile Update="Views\MoviePages\VideoPlayerPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\NavigationBarPages\UserAccountPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\RegistrationPages\SignUpPages\MainSignUpPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MoviePages\VideoPlayerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\NavigationBarPages\UserAccountPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RegistrationPages\SignUpPages\MainSignUpPage.xaml">

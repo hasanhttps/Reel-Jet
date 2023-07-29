@@ -1,5 +1,6 @@
 [
   {
+    "Avatar": "C:\\Users\\hasan\\Downloads\\movie (4).png",
     "Name": "Hesen",
     "Surname": "Abdullazade",
     "Age": 16,
@@ -243,9 +244,101 @@
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True"
+      },
+      {
+        "Title": "Interstellar",
+        "Year": "2014",
+        "Rated": "PG-13",
+        "Released": "07 Nov 2014",
+        "Runtime": "169 min",
+        "Genre": "Adventure, Drama, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Jonathan Nolan, Christopher Nolan",
+        "Actors": "Matthew McConaughey, Anne Hathaway, Jessica Chastain",
+        "Plot": "Earth\u0027s future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind\u0027s survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.",
+        "Language": "English",
+        "Country": "United States, United Kingdom, Canada",
+        "Awards": "Won 1 Oscar. 44 wins \u0026 148 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.7/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "73%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "74/100"
+          }
+        ],
+        "Metascore": "74",
+        "imdbRating": "8.7",
+        "imdbVotes": "1,928,320",
+        "imdbID": "tt0816692",
+        "Type": "movie",
+        "DVD": "31 Mar 2015",
+        "BoxOffice": "$188,020,017",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Se7en",
+        "Year": "1995",
+        "Rated": "R",
+        "Released": "22 Sep 1995",
+        "Runtime": "127 min",
+        "Genre": "Crime, Drama, Mystery",
+        "Director": "David Fincher",
+        "Writer": "Andrew Kevin Walker",
+        "Actors": "Morgan Freeman, Brad Pitt, Kevin Spacey",
+        "Plot": "A film about two homicide detectives\u0027 (Morgan Freeman and Brad Pitt) desperate hunt for a serial killer who justifies his crimes as absolution for the world\u0027s ignorance of the Seven Deadly Sins. The movie takes us from the tortured remains of one victim to the next as the sociopathic \u0022John Doe\u0022 (Kevin Spacey) sermonizes to Detectives Somerset and Mills -- one sin at a time. The sin of Gluttony comes first and the murderer\u0027s terrible capacity is graphically demonstrated in the dark and subdued tones characteristic of film noir. The seasoned and cultured but jaded Somerset researches the Seven Deadly Sins in an effort to understand the killer\u0027s modus operandi while the bright but green and impulsive Detective Mills (Pitt) scoffs at his efforts to get inside the mind of a killer...",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "Nominated for 1 Oscar. 29 wins \u0026 43 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.6/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "82%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "65/100"
+          }
+        ],
+        "Metascore": "65",
+        "imdbRating": "8.6",
+        "imdbVotes": "1,704,879",
+        "imdbID": "tt0114369",
+        "Type": "movie",
+        "DVD": "19 Dec 2000",
+        "BoxOffice": "$100,125,643",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
       }
     ],
     "Email": "hasanabdullazad@gmail.com",
     "Password": "2000Hasan"
+  },
+  {
+    "Avatar": null,
+    "Name": "Rustem",
+    "Surname": "Hesenli",
+    "Age": 16,
+    "Username": "rustamHh",
+    "PhoneNumber": "051-394-08-59",
+    "MyWatchList": [],
+    "HistoryList": [],
+    "Email": "rustamh2006@gmail.com",
+    "Password": "2000Rustam"
   }
 ]

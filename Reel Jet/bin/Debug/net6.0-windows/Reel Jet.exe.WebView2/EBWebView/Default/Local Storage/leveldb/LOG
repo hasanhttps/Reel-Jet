@@ -1,3 +1,6 @@
-2023/07/26-14:41:06.273 6f7c Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2023/07/26-14:41:06.274 6f7c Recovering log #4
-2023/07/26-14:41:06.277 6f7c Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000004.log 
+2023/07/29-22:25:03.304 4a64 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2023/07/29-22:25:03.307 4a64 Recovering log #4
+2023/07/29-22:25:03.316 4a64 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000004.log 
+2023/07/29-22:56:37.689 6f58 Level-0 table #7: started
+2023/07/29-22:56:37.694 6f58 Level-0 table #7: 12832 bytes OK
+2023/07/29-22:56:37.698 6f58 Delete type=0 #4

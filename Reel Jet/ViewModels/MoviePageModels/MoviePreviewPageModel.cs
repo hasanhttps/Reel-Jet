@@ -8,6 +8,7 @@ using Reel_Jet.Views.MoviePages;
 using Reel_Jet.Services.WebServices;
 using Reel_Jet.Models.MovieNamespace;
 using System.Runtime.CompilerServices;
+using Reel_Jet.Views.NavigationBarPages;
 using static Reel_Jet.Models.DatabaseNamespace.Database;
 
 
@@ -21,6 +22,9 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         // Binding Properties
 
+        public ICommand? HistoryPgButtonCommand { get; set; }
+        public ICommand? WatchListPgButtonCommand { get; set; }
+        public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? VideoPlayerPageCommand { get; set; }
         public ICommand? MovieListPageCommand { get; set; }
         public string trailerLink { get; set; }
@@ -38,14 +42,29 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             Movie = movie;
             trailerLink = "https://www.youtube.com/results?search_query=" + movie.Title + " trailer";
 
-            MovieListPageCommand = new RelayCommand(MovieListPage);
+            WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             VideoPlayerPageCommand = new RelayCommand(VideoPlayerPage);
+            HistoryPgButtonCommand = new RelayCommand(HistoryPage);
+            ProfilePgButtonCommand = new RelayCommand(ProfilePage);
+            MovieListPageCommand = new RelayCommand(MovieListPage);
         }
 
         // Functions
 
         private void MovieListPage(object? param) {
             MainFrame.Content = new MovieListPage(MainFrame);
+        }
+
+        private void HistoryPage(object? sender) {
+            MainFrame.Content = new HistoryPage(MainFrame);
+        }
+
+        private void WatchListPage(object? sender) {
+            MainFrame.Content = new WatchListPage(MainFrame);
+        }
+
+        private void ProfilePage(object? sender) {
+            MainFrame.Content = new UserAccountPage(MainFrame);
         }
         
         private void VideoPlayerPage(object? param) {
@@ -54,7 +73,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
             MainFrame.Content = new VideoPlayerPage(MainFrame, Movie.Title);
             foreach(var movie in CurrentUser.HistoryList) {
-                if (movie == Movie)
+                if (movie.Title == Movie.Title && movie.imdbID == Movie.imdbID)
                     isContain = true;
             }
 

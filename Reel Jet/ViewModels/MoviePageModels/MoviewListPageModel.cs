@@ -14,6 +14,7 @@ using Reel_Jet.Models.DatabaseNamespace;
 using Reel_Jet.Views.NavigationBarPages;
 using static Reel_Jet.Services.WebServices.OmdbService;
 
+
 namespace Reel_Jet.ViewModels.MoviePageModels {
     public class MoviewListPageModel : INotifyPropertyChanged {
 
@@ -26,6 +27,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? WatchListPgButtonCommand { get; set; }
+        public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? SelectionChangedCommand { get; set; }
         public ICommand? SearchCommand { get; set; }
         public ICommand? AddToWatchListCommand { get; set; }
@@ -35,8 +37,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
                 _movie = value;
                 OnPropertyChanged();
             }
-        }
-
+        } 
         public ObservableCollection<Movie> Movies { get; set; } = new();
 
         // Constructor
@@ -44,11 +45,12 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         public MoviewListPageModel(Frame frame) { 
             MainFrame = frame;
 
-            HistoryPgButtonCommand = new RelayCommand(HistoryPage);
-            WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             SelectionChangedCommand = new RelayCommand(SelectionChanged);
-            SearchCommand = new RelayCommand(Search);
+            WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             AddToWatchListCommand = new RelayCommand(AddToWatchList);
+            HistoryPgButtonCommand = new RelayCommand(HistoryPage);
+            ProfilePgButtonCommand = new RelayCommand(ProfilePage);
+            SearchCommand = new RelayCommand(Search);
         }
 
         // Functions
@@ -59,6 +61,10 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         private void WatchListPage(object? sender) {
             MainFrame.Content = new WatchListPage(MainFrame);
+        }
+
+        private void ProfilePage(object? sender) {
+            MainFrame.Content = new UserAccountPage(MainFrame);
         }
 
         private void AddToWatchList(object? sender) {

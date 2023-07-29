@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using static Reel_Jet.Models.DatabaseNamespace.JsonHandling;
-using System.Windows.Controls;
 
 namespace Reel_Jet.Models.DatabaseNamespace {
     public static class Database {
@@ -19,7 +20,7 @@ namespace Reel_Jet.Models.DatabaseNamespace {
         // Constructor
 
         static Database() {
-            Users = ReadData<ObservableCollection<User>>("users");
+            Users = ReadData<ObservableCollection<User>>("users")!;
             if (Users == null)
                 Users = new();
         }

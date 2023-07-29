@@ -18,5 +18,6 @@
     <BitmapImage x:Key="AddedImg" UriSource="\Static Files\Images\added.png"/>
     <BitmapImage x:Key="WatchMovieImg" UriSource="\Static Files\Images\watchmovie.png"/>
     <BitmapImage x:Key="PlayMovieHistoryImg" UriSource="\Static Files\Images\playvideohistory.png"/>
+    <BitmapImage x:Key="EditImg" UriSource="\Static Files\Images\edit.png"/>
     
 </ResourceDictionary>
