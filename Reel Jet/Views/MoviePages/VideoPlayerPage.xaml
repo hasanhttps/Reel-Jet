@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:ut="clr-namespace:Reel_Jet.Utilities"
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
       xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
       xmlns:local="clr-namespace:Reel_Jet.Views.MoviePages"
       mc:Ignorable="d" 
@@ -36,10 +37,34 @@
                 <ut:SearchBox PlaceHolder="Search" Height="40" Width="500"/>
             </Grid>
 
-            <Grid Grid.Row="1">
+            <StackPanel Grid.Row="1">
                 <wv2:WebView2 x:Name="Player" Source="{Binding VideoUrl}" Height="600" Width="1200"/>
-                <Button Width="40" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 345 100" BorderBrush="Transparent" Command="{Binding FullScreenButtonCommand}"/>
-            </Grid>
+                <ListView ItemsSource="{Binding Options}" Width="1200" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border Height="40" Width="150" CornerRadius="20" Background="#12121A" BorderBrush="Gray">
+                                <TextBlock Text="{Binding option}" FontSize="15" Foreground="White" FontWeight="Medium" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding SelectionChangedCommand}" 
+                                   CommandParameter="{Binding SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListView}}}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    
+                </ListView>
+                <!--<Button Width="40" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 345 100" BorderBrush="Transparent" Command="{Binding FullScreenButtonCommand}"/>-->
+            </StackPanel>
 
         </Grid>
     </Grid>

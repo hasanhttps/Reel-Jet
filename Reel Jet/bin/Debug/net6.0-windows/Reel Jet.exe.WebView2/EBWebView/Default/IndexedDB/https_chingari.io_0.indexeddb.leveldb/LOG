@@ -1,3 +1,7 @@
-2023/07/29-20:04:27.530 2af4 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_chingari.io_0.indexeddb.leveldb/MANIFEST-000001
-2023/07/29-20:04:27.530 2af4 Recovering log #4
-2023/07/29-20:04:27.532 2af4 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_chingari.io_0.indexeddb.leveldb/000004.log 
+2023/07/30-04:34:55.507 34e0 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_chingari.io_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/30-04:34:55.508 34e0 Recovering log #4
+2023/07/30-04:34:55.509 34e0 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_chingari.io_0.indexeddb.leveldb/000004.log 
+2023/07/30-04:34:55.533 3108 Level-0 table #8: started
+2023/07/30-04:34:55.537 3108 Level-0 table #8: 1679 bytes OK
+2023/07/30-04:34:55.541 3108 Delete type=0 #4
+2023/07/30-04:34:55.543 34e0 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -9,6 +9,8 @@ using System.Windows.Controls;
 using Reel_Jet.Views.MoviePages;
 using Microsoft.Web.WebView2.Wpf;
 using Microsoft.Web.WebView2.Core;
+using System.Collections.ObjectModel;
+using Reel_Jet.Models.MovieNamespace;
 using System.Runtime.CompilerServices;
 using Reel_Jet.Views.NavigationBarPages;
 
@@ -20,6 +22,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         private Frame MainFrame;
         private WebView2 Player;
+        private string? _videoPgUrl;
         private string? _videoUrl;
         private string? _search;
 
@@ -27,10 +30,12 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         public ICommand? WatchListPgButtonCommand { get; set; }
         public ICommand? FullScreenButtonCommand { get; set; }
+        public ICommand? SelectionChangedCommand { get; set; }
         public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? MovieListPageCommand { get; set; }
-        public string VideoUrl {
+        public ObservableCollection<Option>? Options { get; set; }
+        public string? VideoUrl {
             get => _videoUrl;
             set {
                 _videoUrl = value;
@@ -47,11 +52,12 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             // It is blocking ads from webview2 for opening new window
             WebView2_CoreWebView2InitializationCompleted();
 
+            SelectionChangedCommand = new RelayCommand(SelectionChanged);
+            FullScreenButtonCommand = new RelayCommand(FullScreenPage);
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             HistoryPgButtonCommand = new RelayCommand(HistoryPage);
             MovieListPageCommand = new RelayCommand(MovieListPage);
             ProfilePgButtonCommand = new RelayCommand(ProfilePage);
-            FullScreenButtonCommand = new RelayCommand(FullScreenPage);
 
             SearchAlgorithm(title);
             if (!CheckMovieExist())
@@ -83,13 +89,34 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             MessageBox.Show("Fullscreen");
         }
 
+        private void SelectionChanged(object? sender) {
+            string option = (sender as Option)!.option;
+            if (option != null) {
+                int count = 0;
+                foreach(var op in Options) {
+                    count++;
+                    if (op.option == option) break;
+                }
+
+                try {
+                    FindEmbedVideoLink(_videoPgUrl + count.ToString() + "/");
+                }
+                catch (Exception e) {
+                    if (e.Message == "Trailer Link" && option.ToLower() == "fragman") {
+                        Uri uri = new Uri(VideoUrl!);
+                        Player.Source = uri;
+                    }
+                }
+            }
+        }
+
         private void WebView2_CoreWebView2InitializationCompleted() {
             if (Player != null && Player.CoreWebView2 != null) {
                 // Get the CoreWebView2 instance from the WebView2 control
                 CoreWebView2 coreWebView2 = Player.CoreWebView2;
 
                 // Handle the NewWindowRequested event
-                coreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested;
+                coreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested!;
             }
         }
 
@@ -117,7 +144,15 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             var html = httpClient.GetStringAsync(VideoPageLink).Result;
             htmlDocument.LoadHtml(html);
 
+            Options = new();
             var node2 = htmlDocument.DocumentNode.SelectSingleNode("//iframe[@src]");
+            var nodes = htmlDocument.DocumentNode.SelectNodes("//div[@class='keremiya_part']//span");
+            foreach(var n in nodes) {
+                Option option = new Option();
+                option.option = n.InnerText;
+                Options.Add(option);
+            }
+
             HtmlAttribute scr2 = node2.Attributes["src"];
 
             if (scr2.Value.Substring(0, 5) == "https") VideoUrl = scr2.Value;
@@ -160,6 +195,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             try {
                 string? VideoPageLink = FindVideoLink("https://www.dizifilmbox.pw/?s=", CheckVideoLinkDiziBox);
                 FindEmbedVideoLink(VideoPageLink);
+                _videoPgUrl = VideoPageLink;
                 Uri uri = new Uri(VideoUrl);
                 Player.Source = uri;
                 return true;
@@ -179,6 +215,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             try {
                 string? VideoPageLink = FindVideoLink("https://fullfilmizle.net/?s=", CheckVideoLinkFullFilmIzleNet);
                 FindEmbedVideoLink(VideoPageLink);
+                _videoPgUrl = VideoPageLink;
                 Uri uri = new Uri(VideoUrl);
                 Player.Source = uri;
                 return true;
@@ -191,7 +228,6 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         private bool CheckVideoLinkFullFilmIzleNet(HtmlNode node) {
             return node.Attributes["href"]!.Value.Contains("-izle/");
         }
-
 
 
         // INotifyPropertyChanged
