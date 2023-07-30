@@ -1,6 +1,6 @@
 [
   {
-    "Avatar": "C:\\Users\\hasan\\Downloads\\WhatsApp Image 2023-07-25 at 12.28.19.jpg",
+    "Avatar": "C:\\Users\\Abdul_xo22\\Downloads\\developer-line-icon-outline-vector-30762250.jpg",
     "Name": "Hesen",
     "Surname": "Abdullazade",
     "Age": 16,
@@ -324,6 +324,86 @@
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True"
+      },
+      {
+        "Title": "Drive",
+        "Year": "2011",
+        "Rated": "R",
+        "Released": "16 Sep 2011",
+        "Runtime": "100 min",
+        "Genre": "Action, Drama",
+        "Director": "Nicolas Winding Refn",
+        "Writer": "Hossein Amini, James Sallis",
+        "Actors": "Ryan Gosling, Carey Mulligan, Bryan Cranston",
+        "Plot": "This action drama follows a mysterious man who has multiple jobs as a garage mechanic, a Hollywood stuntman and a getaway driver seems to be trying to escape his shady past as he falls for his neighbor - whose husband is in prison and who\u0027s looking after her child alone. Meanwhile, his garage mechanic boss is trying to set up a race team using gangland money, which implicates our driver as he is to be used as the race team\u0027s main driver. Our hero gets more than he bargained for when he meets the man who is married to the woman he loves.",
+        "Language": "English, Spanish",
+        "Country": "United States",
+        "Awards": "Nominated for 1 Oscar. 79 wins \u0026 180 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZjY5ZjQyMjMtMmEwOC00Nzc2LTllYTItMmU2MzJjNTg1NjY0XkEyXkFqcGdeQXVyNjQ1MTMzMDQ@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "93%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "78/100"
+          }
+        ],
+        "Metascore": "78",
+        "imdbRating": "7.8",
+        "imdbVotes": "668,656",
+        "imdbID": "tt0780504",
+        "Type": "movie",
+        "DVD": "31 Jan 2012",
+        "BoxOffice": "$35,061,555",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Requiem for a Dream",
+        "Year": "2000",
+        "Rated": "Unrated",
+        "Released": "15 Dec 2000",
+        "Runtime": "102 min",
+        "Genre": "Drama",
+        "Director": "Darren Aronofsky",
+        "Writer": "Hubert Selby Jr., Darren Aronofsky",
+        "Actors": "Ellen Burstyn, Jared Leto, Jennifer Connelly",
+        "Plot": "Sara Goldfarb (Ellen Burstyn) is a retired widow, living in a small apartment. She spends most of her time watching TV, especially a particular self-help show. She has delusions of rising above her current dull existence by being a guest on that show. Her son, Harry (Jared Leto) is a junkie but along with his friend Tyrone (Marlon Wayans) has visions of making it big by becoming a drug dealer. Harry\u0027s girlfriend Marion (Jennifer Connelly) could be fashion designer or artist but is swept along in Harry\u0027s drug-centric world. Meanwhile Sara has developed an addiction of her own. She desperately wants to lose weight and so goes on a crash course involving popping pills, pills which turn out to be very addictive and harmful to her mental state.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "Nominated for 1 Oscar. 37 wins \u0026 69 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOTdiNzJlOWUtNWMwNS00NmFlLWI0YTEtZmI3YjIzZWUyY2Y3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "78%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "71/100"
+          }
+        ],
+        "Metascore": "71",
+        "imdbRating": "8.3",
+        "imdbVotes": "865,043",
+        "imdbID": "tt0180093",
+        "Type": "movie",
+        "DVD": "22 May 2001",
+        "BoxOffice": "$3,635,482",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
       }
     ],
     "Email": "hasanabdullazad@gmail.com",
@@ -340,5 +420,99 @@
     "HistoryList": [],
     "Email": "rustamh2006@gmail.com",
     "Password": "2000Rustam"
+  },
+  {
+    "Avatar": "\\Static Files\\Images\\MaleUserProfile.png",
+    "Name": "Siya",
+    "Surname": "Cabbarova",
+    "Age": 16,
+    "Username": "siyacbrv",
+    "PhoneNumber": "0555555555",
+    "MyWatchList": [
+      {
+        "Title": "Titanic",
+        "Year": "1997",
+        "Rated": "PG-13",
+        "Released": "19 Dec 1997",
+        "Runtime": "194 min",
+        "Genre": "Drama, Romance",
+        "Director": "James Cameron",
+        "Writer": "James Cameron",
+        "Actors": "Leonardo DiCaprio, Kate Winslet, Billy Zane",
+        "Plot": "84 years later, a 100 year-old woman named Rose DeWitt Bukater tells the story to her granddaughter Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life set in April 10th 1912, on a ship called Titanic when young Rose boards the departing ship with the upper-class passengers and her mother, Ruth DeWitt Bukater, and her fianc\u00E9, Caledon Hockley. Meanwhile, a drifter and artist named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she explains the whole story from departure until the death of Titanic on its first and last voyage April 15th, 1912 at 2:20 in the morning.",
+        "Language": "English, Swedish, Italian, French",
+        "Country": "United States, Mexico",
+        "Awards": "Won 11 Oscars. 126 wins \u0026 83 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "88%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "75/100"
+          }
+        ],
+        "Metascore": "75",
+        "imdbRating": "7.9",
+        "imdbVotes": "1,228,124",
+        "imdbID": "tt0120338",
+        "Type": "movie",
+        "DVD": "08 Jan 2002",
+        "BoxOffice": "$674,292,608",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "HistoryList": [
+      {
+        "Title": "Titanic",
+        "Year": "1997",
+        "Rated": "PG-13",
+        "Released": "19 Dec 1997",
+        "Runtime": "194 min",
+        "Genre": "Drama, Romance",
+        "Director": "James Cameron",
+        "Writer": "James Cameron",
+        "Actors": "Leonardo DiCaprio, Kate Winslet, Billy Zane",
+        "Plot": "84 years later, a 100 year-old woman named Rose DeWitt Bukater tells the story to her granddaughter Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life set in April 10th 1912, on a ship called Titanic when young Rose boards the departing ship with the upper-class passengers and her mother, Ruth DeWitt Bukater, and her fianc\u00E9, Caledon Hockley. Meanwhile, a drifter and artist named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she explains the whole story from departure until the death of Titanic on its first and last voyage April 15th, 1912 at 2:20 in the morning.",
+        "Language": "English, Swedish, Italian, French",
+        "Country": "United States, Mexico",
+        "Awards": "Won 11 Oscars. 126 wins \u0026 83 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "88%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "75/100"
+          }
+        ],
+        "Metascore": "75",
+        "imdbRating": "7.9",
+        "imdbVotes": "1,228,124",
+        "imdbID": "tt0120338",
+        "Type": "movie",
+        "DVD": "08 Jan 2002",
+        "BoxOffice": "$674,292,608",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "Email": "jabbarovasia@gmail.com",
+    "Password": "Siya123."
   }
 ]

@@ -31,6 +31,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         public ICommand? WatchListPgButtonCommand { get; set; }
         public ICommand? FullScreenButtonCommand { get; set; }
         public ICommand? SelectionChangedCommand { get; set; }
+        public ICommand? SettingsPgButtonCommand { get; set; }
         public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? MovieListPageCommand { get; set; }
@@ -55,6 +56,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             SelectionChangedCommand = new RelayCommand(SelectionChanged);
             FullScreenButtonCommand = new RelayCommand(FullScreenPage);
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
+            SettingsPgButtonCommand = new RelayCommand(SettingsPage);
             HistoryPgButtonCommand = new RelayCommand(HistoryPage);
             MovieListPageCommand = new RelayCommand(MovieListPage);
             ProfilePgButtonCommand = new RelayCommand(ProfilePage);
@@ -85,6 +87,10 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             MainFrame.Content = new UserAccountPage(MainFrame);
         }
 
+        private void SettingsPage(object? sender) { 
+            MainFrame.Content = new SettingsPage(MainFrame);
+        }
+
         private void FullScreenPage(object? sender) {
             MessageBox.Show("Fullscreen");
         }
@@ -93,13 +99,15 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             string option = (sender as Option)!.option;
             if (option != null) {
                 int count = 0;
-                foreach(var op in Options) {
+                foreach(var op in Options!) {
                     count++;
                     if (op.option == option) break;
                 }
 
                 try {
                     FindEmbedVideoLink(_videoPgUrl + count.ToString() + "/");
+                    Uri uri = new Uri(VideoUrl!);
+                    Player.Source = uri;
                 }
                 catch (Exception e) {
                     if (e.Message == "Trailer Link" && option.ToLower() == "fragman") {

@@ -36,7 +36,7 @@
             </Grid>
 
             <Grid Grid.Row="1">
-                <ListView ItemsSource="{Binding History}" Margin="60 10 80 0 ">
+                <ListView ItemsSource="{Binding History}" Margin="60 10 80 0 " ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
