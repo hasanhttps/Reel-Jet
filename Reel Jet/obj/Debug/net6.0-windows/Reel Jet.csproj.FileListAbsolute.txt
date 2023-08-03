@@ -83,3 +83,5 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\Nav
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\NavigationBarPages\SettingsPage.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\NavigationBarPages\SettingsPages\AccountPage.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\NavigationBarPages\SettingsPages\AccountPage.baml
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\FullScreenPage.g.cs
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\FullScreenPage.baml

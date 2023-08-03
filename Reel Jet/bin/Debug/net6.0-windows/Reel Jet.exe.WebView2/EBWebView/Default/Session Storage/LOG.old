@@ -1,3 +1,6 @@
-2023/07/30-10:39:25.779 3454 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
-2023/07/30-10:39:25.780 3454 Recovering log #16
-2023/07/30-10:39:25.783 3454 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Session Storage/000016.log 
+2023/08/03-04:07:06.016 5134 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Session Storage/MANIFEST-000001
+2023/08/03-04:07:06.022 5134 Recovering log #31
+2023/08/03-04:07:06.027 5134 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Session Storage/000031.log 
+2023/08/03-04:59:37.779 5134 Level-0 table #36: started
+2023/08/03-04:59:37.789 5134 Level-0 table #36: 75319 bytes OK
+2023/08/03-04:59:37.794 5134 Delete type=0 #31

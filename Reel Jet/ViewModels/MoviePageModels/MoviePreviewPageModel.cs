@@ -18,18 +18,19 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         // Private Fields
 
         private Frame MainFrame;
-        private Movie _movie;
+        private Movie? _movie;
 
         // Binding Properties
 
-        public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? WatchListPgButtonCommand { get; set; }
+        public ICommand? SettingsPgButtonCommand { get; set; }
+        public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? VideoPlayerPageCommand { get; set; }
         public ICommand? MovieListPageCommand { get; set; }
         public string trailerLink { get; set; }
         public Movie Movie {
-            get => _movie;
+            get => _movie!;
             set {
                 _movie = value;
             }
@@ -44,6 +45,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             VideoPlayerPageCommand = new RelayCommand(VideoPlayerPage);
+            SettingsPgButtonCommand = new RelayCommand(SettingsPage);
             HistoryPgButtonCommand = new RelayCommand(HistoryPage);
             ProfilePgButtonCommand = new RelayCommand(ProfilePage);
             MovieListPageCommand = new RelayCommand(MovieListPage);
@@ -63,6 +65,10 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             MainFrame.Content = new WatchListPage(MainFrame);
         }
 
+        private void SettingsPage(object? sender) {
+            MainFrame.Content = new SettingsPage(MainFrame);
+        }
+
         private void ProfilePage(object? sender) {
             MainFrame.Content = new UserAccountPage(MainFrame);
         }
@@ -71,7 +77,8 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             
             bool isContain = false;
 
-            MainFrame.Content = new VideoPlayerPage(MainFrame, Movie.Title);
+            MainFrame.Content = new VideoPlayerPage(MainFrame, Movie);
+
             foreach(var movie in CurrentUser.HistoryList) {
                 if (movie.Title == Movie.Title && movie.imdbID == Movie.imdbID)
                     isContain = true;

@@ -25,6 +25,7 @@
     <None Remove="Static Files\Images\LoadingImage.jpg" />
     <None Remove="Static Files\Images\lock.png" />
     <None Remove="Static Files\Images\MaleUserProfile.png" />
+    <None Remove="Static Files\Images\minimize.png" />
     <None Remove="Static Files\Images\movie %281%29.ico" />
     <None Remove="Static Files\Images\MovieIcon.png" />
     <None Remove="Static Files\Images\no-poster.png" />
@@ -66,6 +67,7 @@
     <Resource Include="Static Files\Images\info.png" />
     <Resource Include="Static Files\Images\lock.png" />
     <Resource Include="Static Files\Images\MaleUserProfile.png" />
+    <Resource Include="Static Files\Images\minimize.png" />
     <Resource Include="Static Files\Images\play.png" />
     <Resource Include="Static Files\Images\movie (1).ico" />
     <Resource Include="Static Files\Images\MovieIcon.png" />

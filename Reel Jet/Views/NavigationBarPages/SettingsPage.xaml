@@ -18,22 +18,22 @@
         <Grid Grid.Column="0" Background="#12121A">
 
             <Button Margin="0 60 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationWatchListButton}" Command="{Binding WatchListPgButtonCommand}"/>
-            <Button Margin="0 110 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationHistoryButton}" Command="{Binding HistoryPgCommand}"/>
-            <Button Margin="0 160 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationMovieListButton}" Command="{Binding MoviePgButtonCommand}"/>
+            <Button Margin="0 110 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationHistoryButton}" Command="{Binding HistoryPgButtonCommand}"/>
+            <Button Margin="0 160 0 0" VerticalAlignment="Top" Style="{StaticResource NavigationMovieListButton}" Command="{Binding MovieListPageCommand}"/>
             <Button Margin="0 0 0 70" VerticalAlignment="Bottom" Style="{StaticResource NavigationSettingsButton}"/>
-            <Button Margin="0 0 0 20" VerticalAlignment="Bottom" Style="{StaticResource NavigationProfileButton}"/>
+            <Button Margin="0 0 0 20" VerticalAlignment="Bottom" Style="{StaticResource NavigationProfileButton}" Command="{Binding ProfilePgButtonCommand}"/>
 
         </Grid>
 
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="140"/>
+                <RowDefinition Height="180"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0"/>
 
-            <Grid Grid.Row="1" Margin="150 0 0 0">
+            <Grid Grid.Row="1" Margin="200 0 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="300"/>
                     <ColumnDefinition/>
@@ -45,11 +45,11 @@
                         
                         <TextBlock Text="Settings" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" FontSize="45"/>
 
-                        <Button FontWeight="Medium" HorizontalContentAlignment="Left" FontSize="23" Foreground="White" Background="Transparent" BorderBrush="Transparent" Height="50" Margin="0 20 0 0" Command="{Binding AccountPgButtonCommand}">
+                        <Button FontWeight="Medium" HorizontalContentAlignment="Left" FontSize="23" Foreground="White" Background="Transparent" BorderBrush="Transparent" Height="50" Margin="0 60 0 0" Command="{Binding AccountPgButtonCommand}">
                             <Button.Content>
                                 <StackPanel Orientation="Horizontal">
                                     <Image Height="25" Width="25" Source="{StaticResource SettingsAccountImg}" Margin="-12 0 15 0"/>
-                                    <TextBlock Text="Account" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" FontSize="20" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Account" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" FontSize="23" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </Button.Content>
                         
@@ -62,10 +62,10 @@
                     </StackPanel>
 
                     <StackPanel VerticalAlignment="Bottom" Margin="0 0 0 49">
-                        <Button FontWeight="Medium" Content="Clear Cache Data" HorizontalContentAlignment="Center" FontSize="23" Foreground="White" Background="Transparent" BorderBrush="Transparent" Height="50" Margin="0 20 0 0" Command="{Binding AccountPgButtonCommand}">
+                        <Button Content="Clear Cache Data" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" HorizontalContentAlignment="Left" FontSize="20" Foreground="White" Background="Transparent" BorderBrush="Transparent" Height="50" Margin="0 20 0 0" Command="{Binding AccountPgButtonCommand}">
                             <Button.Resources>
                                 <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="10"/>
+                                    <Setter Property="CornerRadius" Value="20"/>
                                 </Style>
                             </Button.Resources>
                         </Button>

@@ -1,3 +1,7 @@
-2023/07/30-10:42:42.249 3688 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/07/30-10:42:42.249 3688 Recovering log #29
-2023/07/30-10:42:42.262 3688 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000029.log 
+2023/08/03-05:00:48.084 746c Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/03-05:00:48.085 746c Recovering log #34
+2023/08/03-05:00:48.086 746c Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000034.log 
+2023/08/03-05:00:49.845 6a08 Compacting 1@1 + 1@2 files
+2023/08/03-05:00:49.860 6a08 Generated table #37@1: 604 keys, 37803 bytes
+2023/08/03-05:00:49.860 6a08 Compacted 1@1 + 1@2 files => 37803 bytes
+2023/08/03-05:00:49.862 6a08 compacted to: files[ 0 0 1 0 0 0 0 ]

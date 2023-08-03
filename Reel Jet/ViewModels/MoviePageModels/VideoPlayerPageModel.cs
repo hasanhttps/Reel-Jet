@@ -22,6 +22,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         private Frame MainFrame;
         private WebView2 Player;
+        private Movie Movie;
         private string? _videoPgUrl;
         private string? _videoUrl;
         private string? _search;
@@ -31,6 +32,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         public ICommand? WatchListPgButtonCommand { get; set; }
         public ICommand? FullScreenButtonCommand { get; set; }
         public ICommand? SelectionChangedCommand { get; set; }
+        public ICommand? SettingsPgButtonCommand { get; set; }
         public ICommand? HistoryPgButtonCommand { get; set; }
         public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? MovieListPageCommand { get; set; }
@@ -44,10 +46,11 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         // Constructor
 
-        public VideoPlayerPageModel(Frame frame, string title, WebView2 player) {
+        public VideoPlayerPageModel(Frame frame, Movie movie, WebView2 player) {
 
             MainFrame = frame;
             Player = player;
+            Movie = movie;
 
             // It is blocking ads from webview2 for opening new window
             WebView2_CoreWebView2InitializationCompleted();
@@ -55,11 +58,12 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             SelectionChangedCommand = new RelayCommand(SelectionChanged);
             FullScreenButtonCommand = new RelayCommand(FullScreenPage);
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
+            SettingsPgButtonCommand = new RelayCommand(SettingsPage);
             HistoryPgButtonCommand = new RelayCommand(HistoryPage);
             MovieListPageCommand = new RelayCommand(MovieListPage);
             ProfilePgButtonCommand = new RelayCommand(ProfilePage);
 
-            SearchAlgorithm(title);
+            SearchAlgorithm(movie.Title);
             if (!CheckMovieExist())
                 MessageBox.Show("Video not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
@@ -85,21 +89,28 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             MainFrame.Content = new UserAccountPage(MainFrame);
         }
 
+        private void SettingsPage(object? sender) { 
+            MainFrame.Content = new SettingsPage(MainFrame);
+        }
+
         private void FullScreenPage(object? sender) {
-            MessageBox.Show("Fullscreen");
+
+            MainFrame.Content = new FullScreenPage(VideoUrl!);
         }
 
         private void SelectionChanged(object? sender) {
             string option = (sender as Option)!.option;
             if (option != null) {
                 int count = 0;
-                foreach(var op in Options) {
+                foreach(var op in Options!) {
                     count++;
                     if (op.option == option) break;
                 }
 
                 try {
                     FindEmbedVideoLink(_videoPgUrl + count.ToString() + "/");
+                    Uri uri = new Uri(VideoUrl!);
+                    Player.Source = uri;
                 }
                 catch (Exception e) {
                     if (e.Message == "Trailer Link" && option.ToLower() == "fragman") {
@@ -126,8 +137,9 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         }
 
         private bool CheckMovieExist() {
-            if (ScrapeFullFilmIzleNet()) return true;
-            else if (ScrapeDiziBox()) return true;
+            if (ScrapeDiziBox()) return true;
+            else if (ScrapeFullFilmIzleNet()) return true;
+            else if (ScrapeFullHdIzle()) return true;
             return false;
         }
 
@@ -162,26 +174,30 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
                 throw new Exception("Trailer Link");
         }
 
-        private string? FindVideoLink(string searchlink, Predicate<HtmlNode> checkvideolink) {
-
+        private string? FindVideoLink(string searchlink) {
             string url = searchlink + _search;
             var httpClient = new HttpClient();
             var html = httpClient.GetStringAsync(url).Result;
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
-            var nodes = htmlDocument.DocumentNode.SelectNodes("//a[@href]");
-            HtmlAttribute? scr = null;
 
-            foreach (var node in nodes) {
+            HtmlAttribute? scr = null;
+            HtmlNodeCollection htmlNodes = htmlDocument.DocumentNode.SelectNodes("//div[@class='movie-details existing-details']");
+
+            foreach (var node in htmlNodes) {
                 try {
-                    if (checkvideolink(node)) {
-                        scr = node.Attributes["href"];
+                    if (node.InnerText.Contains(Movie.Year)) {
+                        var doc = new HtmlDocument();
+                        doc.LoadHtml(node.InnerHtml);
+
+                        var nameDiv = doc.DocumentNode.SelectSingleNode("//div[@class='name']");
+                        var anchorElement = nameDiv.SelectSingleNode("a");
+                        scr = anchorElement.Attributes["href"];
                         break;
-                    }
+                    }   
                 }
                 catch { }
             }
-
             return scr!.Value;
         }
 
@@ -193,30 +209,26 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         private bool ScrapeDiziBox() {
             try {
-                string? VideoPageLink = FindVideoLink("https://www.dizifilmbox.pw/?s=", CheckVideoLinkDiziBox);
+                string? VideoPageLink = FindVideoLink("https://www.dizifilmbox.pw/?s=");
                 FindEmbedVideoLink(VideoPageLink);
                 _videoPgUrl = VideoPageLink;
-                Uri uri = new Uri(VideoUrl);
+                Uri uri = new Uri(VideoUrl!);
                 Player.Source = uri;
                 return true;
             }
             catch {
                 return false;
             }
-        }
-
-        private bool CheckVideoLinkDiziBox(HtmlNode node) {
-            return node.Attributes["href"]!.Value.Substring(0, 35) == "https://www.dizifilmbox.pw/filmler/";
         }
 
         // FullFilmIzle.net
 
         private bool ScrapeFullFilmIzleNet() {
             try {
-                string? VideoPageLink = FindVideoLink("https://fullfilmizle.net/?s=", CheckVideoLinkFullFilmIzleNet);
+                string? VideoPageLink = FindVideoLink("https://fullfilmizle.net/?s=");
                 FindEmbedVideoLink(VideoPageLink);
                 _videoPgUrl = VideoPageLink;
-                Uri uri = new Uri(VideoUrl);
+                Uri uri = new Uri(VideoUrl!);
                 Player.Source = uri;
                 return true;
             }
@@ -225,8 +237,20 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             }
         }
 
-        private bool CheckVideoLinkFullFilmIzleNet(HtmlNode node) {
-            return node.Attributes["href"]!.Value.Contains("-izle/");
+        // FullHdIzle.me
+
+        private bool ScrapeFullHdIzle() {
+            try {
+                string? VideoPageLink = FindVideoLink("https://www.fullhdizle.me/?s=");
+                FindEmbedVideoLink(VideoPageLink);
+                _videoPgUrl = VideoPageLink;
+                Uri uri = new Uri(VideoUrl!);
+                Player.Source = uri;
+                return true;
+            }
+            catch {
+                return false;
+            }
         }
 
 
@@ -235,7 +259,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public void OnPropertyChanged([CallerMemberName] string? propertyName = null) { 
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged!.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

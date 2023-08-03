@@ -1,0 +1,15 @@
+﻿<Page x:Class="Reel_Jet.Views.MoviePages.FullScreenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+      xmlns:local="clr-namespace:Reel_Jet.Views.MoviePages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FullScreenPage">
+
+    <Grid>
+        <wv2:WebView2 x:Name="Player" Source="{Binding VideoUrl}"/>
+    </Grid>
+</Page>

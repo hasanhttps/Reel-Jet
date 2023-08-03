@@ -1,21 +1,22 @@
 ﻿
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\App.xaml;;
+FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\ResourceDictionaries\CustomButtonRD.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Utilities\BindableTextBox.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Utilities\CustomPasswordBox.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Utilities\SearchBox.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\MainView.xaml;;
+FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\MoviePages\FullScreenPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\MoviePages\MovieListPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\MoviePages\MoviePreviewPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\MoviePages\VideoPlayerPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\HistoryPage.xaml;;
+FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\SettingsPage.xaml;;
+FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\SettingsPages\AccountPage.xaml;;
+FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\UserAccountPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\WatchListPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\LoadingPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\LoginPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\SignUpPages\MainSignUpPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\SignUpPages\RegistrationPage.xaml;;
 FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\RegistrationPages\SignUpPages\ValidationPage.xaml;;
-FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\UserAccountPage.xaml;;
-FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\SettingsPage.xaml;;
-FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\Views\NavigationBarPages\SettingsPages\AccountPage.xaml;;
-FC:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\ResourceDictionaries\CustomButtonRD.xaml;;
 

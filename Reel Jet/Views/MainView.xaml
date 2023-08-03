@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Reel_Jet.Views"
         mc:Ignorable="d"
         Icon="/Static Files/Images/movie (1).ico"
-        Title="Reel Jet" MinHeight="470" MinWidth="817" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+        Name="BaseWindow"
+        Title="Reel Jet" MinHeight="470" MinWidth="817" WindowState="Maximized" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown">
     
     <Grid>
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden">

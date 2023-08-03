@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\App.xaml
-221951962829
+231905567353
 3-1533126420
-491637560318
+51-158824718
 211-1893662276
-ResourceDictionaries\AnimatedTextBlockRD.xaml;ResourceDictionaries\ButtonWithBookmarkRD.xaml;ResourceDictionaries\CustomButtonRD.xaml;ResourceDictionaries\CustomToolTipRD.xaml;ResourceDictionaries\ImageKeysRD.xaml;Utilities\BindableTextBox.xaml;Utilities\CustomPasswordBox.xaml;Utilities\SearchBox.xaml;Views\MainView.xaml;Views\MoviePages\MovieListPage.xaml;Views\MoviePages\MoviePreviewPage.xaml;Views\MoviePages\VideoPlayerPage.xaml;Views\NavigationBarPages\HistoryPage.xaml;Views\NavigationBarPages\SettingsPage.xaml;Views\NavigationBarPages\SettingsPages\AccountPage.xaml;Views\NavigationBarPages\UserAccountPage.xaml;Views\NavigationBarPages\WatchListPage.xaml;Views\RegistrationPages\LoadingPage.xaml;Views\RegistrationPages\LoginPage.xaml;Views\RegistrationPages\SignUpPages\MainSignUpPage.xaml;Views\RegistrationPages\SignUpPages\RegistrationPage.xaml;Views\RegistrationPages\SignUpPages\ValidationPage.xaml;
+ResourceDictionaries\AnimatedTextBlockRD.xaml;ResourceDictionaries\ButtonWithBookmarkRD.xaml;ResourceDictionaries\CustomButtonRD.xaml;ResourceDictionaries\CustomToolTipRD.xaml;ResourceDictionaries\ImageKeysRD.xaml;Utilities\BindableTextBox.xaml;Utilities\CustomPasswordBox.xaml;Utilities\SearchBox.xaml;Views\MainView.xaml;Views\MoviePages\FullScreenPage.xaml;Views\MoviePages\MovieListPage.xaml;Views\MoviePages\MoviePreviewPage.xaml;Views\MoviePages\VideoPlayerPage.xaml;Views\NavigationBarPages\HistoryPage.xaml;Views\NavigationBarPages\SettingsPage.xaml;Views\NavigationBarPages\SettingsPages\AccountPage.xaml;Views\NavigationBarPages\UserAccountPage.xaml;Views\NavigationBarPages\WatchListPage.xaml;Views\RegistrationPages\LoadingPage.xaml;Views\RegistrationPages\LoginPage.xaml;Views\RegistrationPages\SignUpPages\MainSignUpPage.xaml;Views\RegistrationPages\SignUpPages\RegistrationPage.xaml;Views\RegistrationPages\SignUpPages\ValidationPage.xaml;
 
 False
 

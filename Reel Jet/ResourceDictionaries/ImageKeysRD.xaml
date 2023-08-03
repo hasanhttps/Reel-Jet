@@ -20,5 +20,6 @@
     <BitmapImage x:Key="PlayMovieHistoryImg" UriSource="\Static Files\Images\playvideohistory.png"/>
     <BitmapImage x:Key="EditImg" UriSource="\Static Files\Images\edit.png"/>
     <BitmapImage x:Key="SettingsAccountImg" UriSource="\Static Files\Images\account.png"/>
+    <BitmapImage x:Key="MinimizePlayerImg" UriSource="\Static Files\Images\minimize.png"/>
     
 </ResourceDictionary>
