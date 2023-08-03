@@ -19,6 +19,7 @@ public class RelayCommand : ICommand {
     }
 
     public bool CanExecute(object? parameter) {
+        
         if (_canExcecute == null) return true;
         return _canExcecute(parameter);
     }

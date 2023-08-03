@@ -54,7 +54,6 @@ namespace Reel_Jet.ViewModels.NavigationBarPageModels {
         private void ProfilePage(object? sender) {
             MainFrame.Content = new UserAccountPage(MainFrame);
         }
-
         private void SettingsPage(object? sender) {
             MainFrame.Content = new SettingsPage(MainFrame);
         }

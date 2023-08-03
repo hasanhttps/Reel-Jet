@@ -62,7 +62,7 @@ namespace Reel_Jet.Views.MoviePages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Reel Jet;component/views/moviepages/fullscreenpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Reel Jet;V1.0.0.0;component/views/moviepages/fullscreenpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\MoviePages\FullScreenPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

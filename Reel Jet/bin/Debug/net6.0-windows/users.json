@@ -324,118 +324,6 @@
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True"
-      },
-      {
-        "Title": "Spider-Man: Across the Spider-Verse",
-        "Year": "2023",
-        "Rated": "PG",
-        "Released": "02 Jun 2023",
-        "Runtime": "140 min",
-        "Genre": "Animation, Action, Adventure",
-        "Director": "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson",
-        "Writer": "Phil Lord, Christopher Miller, Dave Callaham",
-        "Actors": "Shameik Moore, Hailee Steinfeld, Brian Tyree Henry",
-        "Plot": "Miles Morales returns for the next chapter of the Oscar\u00AE-winning Spider-Verse saga, an epic adventure that will transport Brooklyn\u0027s full-time, friendly neighborhood Spider-Man across the Multiverse to join forces with Gwen Stacy and a new team of Spider-People to face off with a villain more powerful than anything they have ever encountered.",
-        "Language": "English",
-        "Country": "United States",
-        "Awards": "2 wins \u0026 1 nomination",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.9/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "96%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "86/100"
-          }
-        ],
-        "Metascore": "86",
-        "imdbRating": "8.9",
-        "imdbVotes": "174,379",
-        "imdbID": "tt9362722",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "$351,963,302",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Spider-Man: Into the Spider-Verse",
-        "Year": "2018",
-        "Rated": "PG",
-        "Released": "14 Dec 2018",
-        "Runtime": "117 min",
-        "Genre": "Animation, Action, Adventure",
-        "Director": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
-        "Writer": "Phil Lord, Rodney Rothman",
-        "Actors": "Shameik Moore, Jake Johnson, Hailee Steinfeld",
-        "Plot": "Phil Lord and Christopher Miller, the creative minds behind The Lego Movie and 21 Jump Street, bring their unique talents to a fresh vision of a different Spider-Man Universe, with a groundbreaking visual style that\u0027s the first of its kind. \u0022Spider-Man(TM): Into the Spider-Verse\u0022 introduces Brooklyn teen Miles Morales (Shameik Moore), and the limitless possibilities of the Spider-Verse, where more than one can wear the mask.",
-        "Language": "English, Spanish",
-        "Country": "Canada, United States",
-        "Awards": "Won 1 Oscar. 81 wins \u0026 57 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.4/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "97%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "87/100"
-          }
-        ],
-        "Metascore": "87",
-        "imdbRating": "8.4",
-        "imdbVotes": "608,817",
-        "imdbID": "tt4633694",
-        "Type": "movie",
-        "DVD": "07 Mar 2019",
-        "BoxOffice": "$190,241,310",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Inception: The Cobol Job",
-        "Year": "2010",
-        "Rated": "Not Rated",
-        "Released": "07 Dec 2010",
-        "Runtime": "15 min",
-        "Genre": "Animation, Short, Sci-Fi",
-        "Director": "Ian Kirby",
-        "Writer": "Christopher Nolan (based on characters by)",
-        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Lukas Haas",
-        "Plot": "This Inception prequel unfolds courtesy of a beautiful Motion Comic, and explains how Cobb, Arthur and Nash were enlisted by Cobol Engineering. Diehard fans of the film will be especially interested in this one.",
-        "Language": "English",
-        "Country": "USA",
-        "Awards": "N/A",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjE0NGIwM2EtZjQxZi00ZTE5LWExN2MtNDBlMjY1ZmZkYjU3XkEyXkFqcGdeQXVyNjMwNzk3Mjk@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "7.8/10"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "7.8",
-        "imdbVotes": "2,160",
-        "imdbID": "tt5295894",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
       }
     ],
     "Email": "hasanabdullazad@gmail.com",
@@ -452,5 +340,99 @@
     "HistoryList": [],
     "Email": "rustamh2006@gmail.com",
     "Password": "2000Rustam"
+  },
+  {
+    "Avatar": "\\Static Files\\Images\\MaleUserProfile.png",
+    "Name": "Siya",
+    "Surname": "Cabbarova",
+    "Age": 16,
+    "Username": "siyacbrv",
+    "PhoneNumber": "0555555555",
+    "MyWatchList": [
+      {
+        "Title": "Titanic",
+        "Year": "1997",
+        "Rated": "PG-13",
+        "Released": "19 Dec 1997",
+        "Runtime": "194 min",
+        "Genre": "Drama, Romance",
+        "Director": "James Cameron",
+        "Writer": "James Cameron",
+        "Actors": "Leonardo DiCaprio, Kate Winslet, Billy Zane",
+        "Plot": "84 years later, a 100 year-old woman named Rose DeWitt Bukater tells the story to her granddaughter Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life set in April 10th 1912, on a ship called Titanic when young Rose boards the departing ship with the upper-class passengers and her mother, Ruth DeWitt Bukater, and her fianc\u00E9, Caledon Hockley. Meanwhile, a drifter and artist named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she explains the whole story from departure until the death of Titanic on its first and last voyage April 15th, 1912 at 2:20 in the morning.",
+        "Language": "English, Swedish, Italian, French",
+        "Country": "United States, Mexico",
+        "Awards": "Won 11 Oscars. 126 wins \u0026 83 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "88%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "75/100"
+          }
+        ],
+        "Metascore": "75",
+        "imdbRating": "7.9",
+        "imdbVotes": "1,228,124",
+        "imdbID": "tt0120338",
+        "Type": "movie",
+        "DVD": "08 Jan 2002",
+        "BoxOffice": "$674,292,608",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "HistoryList": [
+      {
+        "Title": "Titanic",
+        "Year": "1997",
+        "Rated": "PG-13",
+        "Released": "19 Dec 1997",
+        "Runtime": "194 min",
+        "Genre": "Drama, Romance",
+        "Director": "James Cameron",
+        "Writer": "James Cameron",
+        "Actors": "Leonardo DiCaprio, Kate Winslet, Billy Zane",
+        "Plot": "84 years later, a 100 year-old woman named Rose DeWitt Bukater tells the story to her granddaughter Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life set in April 10th 1912, on a ship called Titanic when young Rose boards the departing ship with the upper-class passengers and her mother, Ruth DeWitt Bukater, and her fianc\u00E9, Caledon Hockley. Meanwhile, a drifter and artist named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she explains the whole story from departure until the death of Titanic on its first and last voyage April 15th, 1912 at 2:20 in the morning.",
+        "Language": "English, Swedish, Italian, French",
+        "Country": "United States, Mexico",
+        "Awards": "Won 11 Oscars. 126 wins \u0026 83 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "88%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "75/100"
+          }
+        ],
+        "Metascore": "75",
+        "imdbRating": "7.9",
+        "imdbVotes": "1,228,124",
+        "imdbID": "tt0120338",
+        "Type": "movie",
+        "DVD": "08 Jan 2002",
+        "BoxOffice": "$674,292,608",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "Email": "jabbarovasia@gmail.com",
+    "Password": "Siya123."
   }
 ]
