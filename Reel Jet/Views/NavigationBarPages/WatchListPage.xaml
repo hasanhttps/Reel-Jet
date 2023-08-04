@@ -53,6 +53,7 @@
                                             <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.WatchMovieFromWatchListCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding}"></MouseBinding>
                                         </Image.InputBindings>
                                     </Image>
+                                    
                                     <Button Style="{StaticResource ButtonWithBookmark}" Command="{Binding DataContext.RemoveFromWatchListCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding}" VerticalAlignment="Top" HorizontalAlignment="Left" >
                                         <Button.ToolTip>
                                             <ToolTip Style="{StaticResource CustomToolTipStyle}" Placement="Mouse" MaxWidth="150">
