@@ -50,11 +50,11 @@
 
                                     <Image Source="{Binding Poster}" MaxWidth="130">
                                         <Image.InputBindings>
-                                            <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.WatchMovieFromWatchListCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding}"></MouseBinding>
+                                            <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.WatchMovieFromWatchList, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding}"></MouseBinding>
                                         </Image.InputBindings>
                                     </Image>
-                                    
-                                    <Button Style="{StaticResource ButtonWithBookmark}" Command="{Binding DataContext.RemoveFromWatchListCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding}" VerticalAlignment="Top" HorizontalAlignment="Left" >
+
+                                    <Button Style="{StaticResource ButtonWithBookmark}" Command="{Binding DataContext.RemoveFromWatchList, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding}" VerticalAlignment="Top" HorizontalAlignment="Left" >
                                         <Button.ToolTip>
                                             <ToolTip Style="{StaticResource CustomToolTipStyle}" Placement="Mouse" MaxWidth="150">
                                                 <TextBlock TextWrapping="Wrap" FontSize="10" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Background="#12121A"  Foreground="White" Padding="5" Text="Click to remove this movie from your WatchList"/>

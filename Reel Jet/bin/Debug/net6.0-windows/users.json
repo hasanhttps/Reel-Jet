@@ -1,11 +1,11 @@
 [
   {
+    "Avatar": "C:\\Users\\hasan\\Downloads\\icons8-account-96.png",
     "Name": "Hesen",
     "Surname": "Abdullazade",
-    "Username": "hasanhttps",
     "Age": 16,
+    "Username": "hasanhttps",
     "PhoneNumber": "050-335-65-02",
-    "Avatar": "C:\\Users\\hasan\\Downloads\\icons8-account-96.png",
     "MyWatchList": [
       {
         "Title": "Fight Club",
@@ -530,24 +530,24 @@
     "Password": "2000Hasan"
   },
   {
+    "Avatar": null,
     "Name": "Rustem",
     "Surname": "Hesenli",
-    "Username": "rustamHh",
     "Age": 16,
+    "Username": "rustamHh",
     "PhoneNumber": "051-394-08-59",
-    "Avatar": null,
     "MyWatchList": [],
     "HistoryList": [],
     "Email": "rustamh2006@gmail.com",
     "Password": "2000Rustam"
   },
   {
+    "Avatar": "\\Static Files\\Images\\MaleUserProfile.png",
     "Name": "Siya",
     "Surname": "Cabbarova",
-    "Username": "siyacbrv",
     "Age": 16,
+    "Username": "siyacbrv",
     "PhoneNumber": "0555555555",
-    "Avatar": "\\Static Files\\Images\\MaleUserProfile.png",
     "MyWatchList": [
       {
         "Title": "Titanic",
@@ -636,12 +636,12 @@
     "Password": "Siya123."
   },
   {
+    "Avatar": "C:\\Users\\hasan\\Downloads\\WhatsApp Image 2023-07-25 at 12.28.19.jpg",
     "Name": "Zeyneb",
     "Surname": "Abdullazade",
-    "Username": "zeynab",
     "Age": 18,
+    "Username": "zeynab",
     "PhoneNumber": "050-335-65-02",
-    "Avatar": "C:\\Users\\hasan\\Downloads\\WhatsApp Image 2023-07-25 at 12.28.19.jpg",
     "MyWatchList": [
       {
         "Title": "Inception",
