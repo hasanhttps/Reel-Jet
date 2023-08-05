@@ -2,7 +2,7 @@
 using System.Windows;
 using Reel_Jet.ViewModels;
 using System.Windows.Input;
-
+using Reel_Jet.Views.MoviePages;
 
 namespace Reel_Jet.Views {
     public partial class MainView : Window {

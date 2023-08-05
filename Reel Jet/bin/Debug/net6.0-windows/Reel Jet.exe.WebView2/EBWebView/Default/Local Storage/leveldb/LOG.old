@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-2023/08/03-04:07:06.020 57c8 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2023/08/03-04:07:06.022 57c8 Recovering log #12
-2023/08/03-04:07:06.030 57c8 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000012.log 
-=======
-2023/07/30-12:55:55.091 4c40 Reusing MANIFEST C:\Users\Abdul_xo22\Source\Repos\Reel Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
-2023/07/30-12:55:55.092 4c40 Recovering log #3
-2023/07/30-12:55:55.095 4c40 Reusing old log C:\Users\Abdul_xo22\Source\Repos\Reel Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000003.log 
->>>>>>> ff5d5c27d6aa5f8c8980d0ade5004099fb76ac4d
+2023/08/05-04:09:29.614 6d4 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2023/08/05-04:09:29.616 6d4 Recovering log #35
+2023/08/05-04:09:29.621 6d4 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000035.log 

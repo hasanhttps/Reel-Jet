@@ -54,7 +54,7 @@ namespace Reel_Jet.Views.RegistrationPages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Reel Jet;V1.0.0.0;component/views/registrationpages/loginpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Reel Jet;component/views/registrationpages/loginpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\RegistrationPages\LoginPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

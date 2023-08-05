@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using RestSharp;
+using System.Windows;
 using System.Text.Json;
 using Reel_Jet.Commands;
 using System.Windows.Input;
@@ -31,6 +32,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         public ICommand? ProfilePgButtonCommand { get; set; }
         public ICommand? SearchCommand { get; set; }
         public ICommand? AddToWatchListCommand { get; set; }
+        public ICommand? WatchTrailerFromListCommand { get; set; }
         public MovieCollection Movie {
             get => _movie;
             set {
@@ -43,8 +45,10 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         // Constructor
 
         public MoviewListPageModel(Frame frame) { 
+
             MainFrame = frame;
 
+            WatchTrailerFromListCommand = new RelayCommand(SelectionChanged);
             SelectionChangedCommand = new RelayCommand(SelectionChanged);
             WatchListPgButtonCommand = new RelayCommand(WatchListPage);
             AddToWatchListCommand = new RelayCommand(AddToWatchList);
@@ -52,6 +56,11 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             HistoryPgButtonCommand = new RelayCommand(HistoryPage);
             ProfilePgButtonCommand = new RelayCommand(ProfilePage);
             SearchCommand = new RelayCommand(Search);
+
+            // Popular Movies
+
+            Popular();
+
         }
 
         // Functions
@@ -59,7 +68,6 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         private void HistoryPage(object? sender) {
             MainFrame.Content = new HistoryPage(MainFrame);
         }
-
         private void WatchListPage(object? sender) {
             MainFrame.Content = new WatchListPage(MainFrame);
         }
@@ -83,6 +91,25 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             JsonHandling.WriteData(Database.Users, "users");
         }
 
+        private async void Popular() {
+            var options = new RestClientOptions("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1");
+            var client = new RestClient(options);
+            var request = new RestRequest("");
+            request.AddHeader("accept", "application/json");
+            request.AddHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwN2I3OWYxNmU2NWFmMGY1YTBjNGY4ZGFkZDdkMDhjNCIsInN1YiI6IjY0YjA0MzFjMjBlY2FmMDBjNmY2MWQ1ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VErhjbegJJ2tyZVP-GiDRN_gTcH_MYVhQ1wThi0Ytb0");
+            var response = await client.GetAsync(request);
+            PopularMovies popularMovies = JsonSerializer.Deserialize<PopularMovies>(response.Content!)!;
+
+
+            for(int i = 0; i < popularMovies.results.Count; i++)  {
+                var jsonStr = await GetConcreteMovieByTitle(popularMovies.results[i].title);
+                Movie movie = JsonSerializer.Deserialize<Movie>(jsonStr)!;
+                movie.Year = popularMovies.results[i].release_date.Substring(0, 4);
+
+                Movies.Add(movie);
+            }
+        }
+
 
         private async void TaskToJson(string title) {
 
@@ -97,7 +124,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
                     var movieCollectionJson = await OmdbService.GetConcreteMovieById(result.imdbID);
                     var movieFromCollection = JsonSerializer.Deserialize<Movie>(movieCollectionJson);
 
-                    if (movieFromCollection.Poster == "N/A")
+                    if (movieFromCollection!.Poster == "N/A")
                         movieFromCollection.Poster = "\\Static Files\\Images\\no-poster.png";
 
                     if (movieFromCollection is not null)
@@ -113,7 +140,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         }
 
         private void Search(object? param) {
-            string text = param as string;
+            string text = (param as string)!;
             TaskToJson(text);
         }
 
@@ -123,7 +150,7 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
         public event PropertyChangedEventHandler? PropertyChanged;
 
         private void OnPropertyChanged([CallerMemberName] string? propertyName = null) {
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

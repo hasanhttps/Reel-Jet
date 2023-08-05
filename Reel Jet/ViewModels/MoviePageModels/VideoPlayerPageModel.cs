@@ -2,42 +2,36 @@
 using System.Windows;
 using System.Net.Http;
 using HtmlAgilityPack;
-using Reel_Jet.Commands;
-using System.Windows.Input;
 using System.ComponentModel;
 using System.Windows.Controls;
-using Reel_Jet.Views.MoviePages;
-using Microsoft.Web.WebView2.Wpf;
-using Microsoft.Web.WebView2.Core;
 using System.Collections.ObjectModel;
 using Reel_Jet.Models.MovieNamespace;
 using System.Runtime.CompilerServices;
 using Reel_Jet.Views.NavigationBarPages;
+using Reel_Jet.Views.MoviePages.VideoPlayerPages;
 
+#nullable disable
 
 namespace Reel_Jet.ViewModels.MoviePageModels {
     class VideoPlayerPageModel : INotifyPropertyChanged {
 
         // Private Fields
 
-        private Frame MainFrame;
-        private WebView2 Player;
         private Movie Movie;
-        private string? _videoPgUrl;
-        private string? _videoUrl;
-        private string? _search;
+        private Frame MainFrame;
+        private string _videoPgUrl;
+        private string _videoUrl;
+        private string _search;
 
         // Binding Properties
 
-        public ICommand? WatchListPgButtonCommand { get; set; }
-        public ICommand? FullScreenButtonCommand { get; set; }
-        public ICommand? SelectionChangedCommand { get; set; }
-        public ICommand? SettingsPgButtonCommand { get; set; }
-        public ICommand? HistoryPgButtonCommand { get; set; }
-        public ICommand? ProfilePgButtonCommand { get; set; }
-        public ICommand? MovieListPageCommand { get; set; }
-        public ObservableCollection<Option>? Options { get; set; }
-        public string? VideoUrl {
+
+        public object PrevFrame;
+        public Frame VideoPlayerFrame;
+        public FullScreenPage fullScreenPage;
+
+        public ObservableCollection<Option> Options { get; set; }
+        public string VideoUrl {
             get => _videoUrl;
             set {
                 _videoUrl = value;
@@ -46,95 +40,19 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
 
         // Constructor
 
-        public VideoPlayerPageModel(Frame frame, Movie movie, WebView2 player) {
-
+        public VideoPlayerPageModel(Frame frame, Movie movie, Frame videoplayerframe) {
+            VideoPlayerFrame = videoplayerframe;
             MainFrame = frame;
-            Player = player;
             Movie = movie;
-
-            // It is blocking ads from webview2 for opening new window
-            WebView2_CoreWebView2InitializationCompleted();
-
-            SelectionChangedCommand = new RelayCommand(SelectionChanged);
-            FullScreenButtonCommand = new RelayCommand(FullScreenPage);
-            WatchListPgButtonCommand = new RelayCommand(WatchListPage);
-            SettingsPgButtonCommand = new RelayCommand(SettingsPage);
-            HistoryPgButtonCommand = new RelayCommand(HistoryPage);
-            MovieListPageCommand = new RelayCommand(MovieListPage);
-            ProfilePgButtonCommand = new RelayCommand(ProfilePage);
 
             SearchAlgorithm(movie.Title);
             if (!CheckMovieExist())
-                MessageBox.Show("Video not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Movie video don't exist!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
 
+            VideoPlayerFrame.Content = new MinimizeScreenPage(frame, movie, Options, VideoUrl, _videoPgUrl);
         }
-
 
         // Functions
-
-
-        private void HistoryPage(object? sender) {
-            MainFrame.Content = new HistoryPage(MainFrame);
-        }
-
-        private void WatchListPage(object? sender) {
-            MainFrame.Content = new WatchListPage(MainFrame);
-        }
-
-        private void MovieListPage(object? sender) {
-            MainFrame.Content = new MovieListPage(MainFrame);
-        }
-
-        private void ProfilePage(object? sender) {
-            MainFrame.Content = new UserAccountPage(MainFrame);
-        }
-
-        private void SettingsPage(object? sender) { 
-            MainFrame.Content = new SettingsPage(MainFrame);
-        }
-
-        private void FullScreenPage(object? sender) {
-
-            MainFrame.Content = new FullScreenPage(VideoUrl!);
-        }
-
-        private void SelectionChanged(object? sender) {
-            string option = (sender as Option)!.option;
-            if (option != null) {
-                int count = 0;
-                foreach(var op in Options!) {
-                    count++;
-                    if (op.option == option) break;
-                }
-
-                try {
-                    FindEmbedVideoLink(_videoPgUrl + count.ToString() + "/");
-                    Uri uri = new Uri(VideoUrl!);
-                    Player.Source = uri;
-                }
-                catch (Exception e) {
-                    if (e.Message == "Trailer Link" && option.ToLower() == "fragman") {
-                        Uri uri = new Uri(VideoUrl!);
-                        Player.Source = uri;
-                    }
-                }
-            }
-        }
-
-        private void WebView2_CoreWebView2InitializationCompleted() {
-            if (Player != null && Player.CoreWebView2 != null) {
-                // Get the CoreWebView2 instance from the WebView2 control
-                CoreWebView2 coreWebView2 = Player.CoreWebView2;
-
-                // Handle the NewWindowRequested event
-                coreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested!;
-            }
-        }
-
-        private void CoreWebView2_NewWindowRequested(object sender, CoreWebView2NewWindowRequestedEventArgs e) {
-            // Cancel the new window request
-            e.Handled = true;
-        }
 
         private bool CheckMovieExist() {
             if (ScrapeDiziBox()) return true;
@@ -157,24 +75,26 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             htmlDocument.LoadHtml(html);
 
             Options = new();
-            var node2 = htmlDocument.DocumentNode.SelectSingleNode("//iframe[@src]");
-            var nodes = htmlDocument.DocumentNode.SelectNodes("//div[@class='keremiya_part']//span");
-            foreach(var n in nodes) {
+            var linkContainer = htmlDocument.DocumentNode.SelectSingleNode("//iframe[@src]");
+            var optionNodes = htmlDocument.DocumentNode.SelectNodes("//div[@class='keremiya_part']//span");
+
+            foreach(var optionNode in optionNodes) {
                 Option option = new Option();
-                option.option = n.InnerText;
+                option.option = optionNode.InnerText;
                 Options.Add(option);
             }
 
-            HtmlAttribute scr2 = node2.Attributes["src"];
+            HtmlAttribute scrapingLink = linkContainer.Attributes["src"];
 
-            if (scr2.Value.Substring(0, 5) == "https") VideoUrl = scr2.Value;
-            else VideoUrl = "https:" + scr2.Value;
+            if (scrapingLink.Value.Substring(0, 5) == "https") VideoUrl = scrapingLink.Value;
+            else VideoUrl = "https:" + scrapingLink.Value;
 
             if (VideoUrl.Contains("youtube.com"))
                 throw new Exception("Trailer Link");
         }
 
         private string? FindVideoLink(string searchlink) {
+
             string url = searchlink + _search;
             var httpClient = new HttpClient();
             var html = httpClient.GetStringAsync(url).Result;
@@ -182,9 +102,9 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
             htmlDocument.LoadHtml(html);
 
             HtmlAttribute? scr = null;
-            HtmlNodeCollection htmlNodes = htmlDocument.DocumentNode.SelectNodes("//div[@class='movie-details existing-details']");
+            HtmlNodeCollection movieDetailNodes = htmlDocument.DocumentNode.SelectNodes("//div[@class='movie-details existing-details']");
 
-            foreach (var node in htmlNodes) {
+            foreach (var node in movieDetailNodes) {
                 try {
                     if (node.InnerText.Contains(Movie.Year)) {
                         var doc = new HtmlDocument();
@@ -212,8 +132,6 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
                 string? VideoPageLink = FindVideoLink("https://www.dizifilmbox.pw/?s=");
                 FindEmbedVideoLink(VideoPageLink);
                 _videoPgUrl = VideoPageLink;
-                Uri uri = new Uri(VideoUrl!);
-                Player.Source = uri;
                 return true;
             }
             catch {
@@ -228,8 +146,6 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
                 string? VideoPageLink = FindVideoLink("https://fullfilmizle.net/?s=");
                 FindEmbedVideoLink(VideoPageLink);
                 _videoPgUrl = VideoPageLink;
-                Uri uri = new Uri(VideoUrl!);
-                Player.Source = uri;
                 return true;
             }
             catch {
@@ -244,8 +160,6 @@ namespace Reel_Jet.ViewModels.MoviePageModels {
                 string? VideoPageLink = FindVideoLink("https://www.fullhdizle.me/?s=");
                 FindEmbedVideoLink(VideoPageLink);
                 _videoPgUrl = VideoPageLink;
-                Uri uri = new Uri(VideoUrl!);
-                Player.Source = uri;
                 return true;
             }
             catch {

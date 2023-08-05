@@ -69,7 +69,7 @@ namespace Reel_Jet.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Reel Jet;V1.0.0.0;component/views/registrationpages/loadingpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Reel Jet;component/views/registrationpages/loadingpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\RegistrationPages\LoadingPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

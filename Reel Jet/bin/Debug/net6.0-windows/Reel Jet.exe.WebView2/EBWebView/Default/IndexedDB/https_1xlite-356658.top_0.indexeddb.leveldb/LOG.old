@@ -1,3 +1,15 @@
-2023/08/03-04:03:28.876 2ba4 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_1xlite-356658.top_0.indexeddb.leveldb/MANIFEST-000001
-2023/08/03-04:03:28.877 2ba4 Recovering log #4
-2023/08/03-04:03:28.877 2ba4 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_1xlite-356658.top_0.indexeddb.leveldb/000004.log 
+2023/08/04-03:11:53.850 b80 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_1xlite-356658.top_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/04-03:11:53.850 b80 Recovering log #4
+2023/08/04-03:11:53.852 b80 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_1xlite-356658.top_0.indexeddb.leveldb/000004.log 
+2023/08/04-04:08:42.381 4af4 Level-0 table #8: started
+2023/08/04-04:08:42.386 4af4 Level-0 table #8: 37052 bytes OK
+2023/08/04-04:08:42.391 4af4 Delete type=0 #4
+2023/08/04-04:08:42.392 4af4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2023/08/04-04:08:42.394 4af4 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0f\x00s\x00e\x00l\x00e\x00c\x00t\x00e\x00d\x00B\x00o\x00n\x00u\x00s\x00I\x00d' @ 514 : 1
+2023/08/04-04:08:42.394 4af4 Compacting 1@1 + 1@2 files
+2023/08/04-04:08:42.398 4af4 Generated table #9@1: 48 keys, 13357 bytes
+2023/08/04-04:08:42.398 4af4 Compacted 1@1 + 1@2 files => 13357 bytes
+2023/08/04-04:08:42.401 4af4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/08/04-04:08:42.402 4af4 Delete type=2 #5
+2023/08/04-04:08:42.402 4af4 Delete type=2 #8
+2023/08/04-04:08:42.405 4af4 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0f\x00s\x00e\x00l\x00e\x00c\x00t\x00e\x00d\x00B\x00o\x00n\x00u\x00s\x00I\x00d' @ 514 : 1 .. (end); will stop at (end)

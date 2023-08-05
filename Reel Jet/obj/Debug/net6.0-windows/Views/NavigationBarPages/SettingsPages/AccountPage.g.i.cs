@@ -54,8 +54,7 @@ namespace Reel_Jet.Views.NavigationBarPages.SettingsPages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Reel Jet;V1.0.0.0;component/views/navigationbarpages/settingspages/accountpage.x" +
-                    "aml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Reel Jet;component/views/navigationbarpages/settingspages/accountpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\Views\NavigationBarPages\SettingsPages\AccountPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

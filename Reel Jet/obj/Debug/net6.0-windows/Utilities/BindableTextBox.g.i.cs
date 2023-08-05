@@ -72,7 +72,7 @@ namespace Reel_Jet.Utilities {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Reel Jet;V1.0.0.0;component/utilities/bindabletextbox.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Reel Jet;component/utilities/bindabletextbox.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Utilities\BindableTextBox.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

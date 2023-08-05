@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tARJWymh51YS4rkM2H5hP0J2vQI0IMH6/YZo7IT5qXOl42+ztVZJfDrg7NhY51xvXm0s6zAvEwJz8cZetl4sxw==",
+  "dgSpecHash": "6nd/dIwVHbZyTPGyX4Huv2uW2xffDs0oXkfVOHsbOyWbSvEiRd505QVJ8PAkCWv9ZCDjtDN0TtLrSSIk02Al7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\hasan\\WPF Projects\\Reel-Jet\\Reel Jet\\Reel Jet.csproj",
   "expectedPackageFiles": [
@@ -19,9 +19,10 @@
     "C:\\Users\\hasan\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\microsoft.web.webview2.1.0.1823.32.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\hasan\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\hasan\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
   ],
   "logs": [
     {

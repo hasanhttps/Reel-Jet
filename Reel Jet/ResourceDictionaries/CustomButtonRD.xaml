@@ -140,4 +140,27 @@
         </Setter>
     </Style>
 
+    <Style TargetType="Button" x:Key="PlayTrailerButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="3" Name="buttonborder" Width="100">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{StaticResource PlayImg}" Width="20" Height="20" Margin="10 0 5 0"></Image>
+                            <TextBlock Text="Trailer" FontSize="11" Foreground="White" FontFamily="/Static Files/Fonts/QuickSand/#Quicksand" Margin="0 3 0 0"></TextBlock>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonborder" Property="Background" Value="#302e2e" />
+                        </Trigger>
+                        <Trigger Property="IsMouseCaptured" Value="True">
+                            <Setter TargetName="buttonborder" Property="Background" Value="#4a4747" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

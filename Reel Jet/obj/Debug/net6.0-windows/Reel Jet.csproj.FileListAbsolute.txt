@@ -35,7 +35,6 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\CustomPasswordBox.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\SearchBox.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MainView.g.cs
-C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\FullScreenPage.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\MovieListPage.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\MoviePreviewPage.g.cs
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\VideoPlayerPage.g.cs
@@ -60,7 +59,6 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\CustomPasswordBox.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Utilities\SearchBox.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MainView.baml
-C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\FullScreenPage.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\MovieListPage.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\MoviePreviewPage.baml
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\VideoPlayerPage.baml
@@ -85,3 +83,8 @@ C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\refint\Re
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet.pdb
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Reel Jet.genruntimeconfig.cache
 C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\ref\Reel Jet.dll
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\VideoPlayerPages\FullScreenPage.g.cs
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\VideoPlayerPages\MinimizeScreenPage.g.cs
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\VideoPlayerPages\FullScreenPage.baml
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\obj\Debug\net6.0-windows\Views\MoviePages\VideoPlayerPages\MinimizeScreenPage.baml
+C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\RestSharp.dll

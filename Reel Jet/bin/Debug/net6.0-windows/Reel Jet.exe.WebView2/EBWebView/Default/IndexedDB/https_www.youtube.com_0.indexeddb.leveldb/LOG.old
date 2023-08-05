@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-2023/08/03-03:59:43.165 6624 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/08/03-03:59:43.166 6624 Recovering log #29
-2023/08/03-03:59:43.194 6624 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000029.log 
-2023/08/03-04:00:00.801 2a4c Level-0 table #35: started
-2023/08/03-04:00:00.822 2a4c Level-0 table #35: 1225706 bytes OK
-2023/08/03-04:00:00.824 2a4c Delete type=0 #29
-=======
->>>>>>> ff5d5c27d6aa5f8c8980d0ade5004099fb76ac4d
+2023/08/05-04:09:30.487 6a8 Reusing MANIFEST C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/08/05-04:09:30.488 6a8 Recovering log #51
+2023/08/05-04:09:30.527 6a8 Reusing old log C:\Users\hasan\WPF Projects\Reel-Jet\Reel Jet\bin\Debug\net6.0-windows\Reel Jet.exe.WebView2\EBWebView\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000051.log 

@@ -16,10 +16,13 @@
     <Compile Update="Utilities\BindableTextBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\MoviePages\FullScreenPage.xaml.cs">
+    <Compile Update="Views\MoviePages\VideoPlayerPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\MoviePages\VideoPlayerPage.xaml.cs">
+    <Compile Update="Views\MoviePages\VideoPlayerPages\FullScreenPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MoviePages\VideoPlayerPages\MinimizeScreenPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\NavigationBarPages\SettingsPage.xaml.cs">
@@ -57,10 +60,13 @@
     <Page Update="Utilities\BindableTextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\MoviePages\FullScreenPage.xaml">
+    <Page Update="Views\MoviePages\VideoPlayerPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\MoviePages\VideoPlayerPage.xaml">
+    <Page Update="Views\MoviePages\VideoPlayerPages\FullScreenPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MoviePages\VideoPlayerPages\MinimizeScreenPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\NavigationBarPages\SettingsPage.xaml">
