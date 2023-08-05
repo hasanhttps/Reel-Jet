@@ -1,11 +1,11 @@
 [
   {
-    "Avatar": "C:\\Users\\hasan\\Downloads\\icons8-account-96.png",
     "Name": "Hesen",
     "Surname": "Abdullazade",
-    "Age": 16,
     "Username": "hasanhttps",
+    "Age": 16,
     "PhoneNumber": "050-335-65-02",
+    "Avatar": "C:\\Users\\hasan\\Downloads\\icons8-account-96.png",
     "MyWatchList": [
       {
         "Title": "Fight Club",
@@ -530,24 +530,24 @@
     "Password": "2000Hasan"
   },
   {
-    "Avatar": null,
     "Name": "Rustem",
     "Surname": "Hesenli",
-    "Age": 16,
     "Username": "rustamHh",
+    "Age": 16,
     "PhoneNumber": "051-394-08-59",
+    "Avatar": null,
     "MyWatchList": [],
     "HistoryList": [],
     "Email": "rustamh2006@gmail.com",
     "Password": "2000Rustam"
   },
   {
-    "Avatar": "\\Static Files\\Images\\MaleUserProfile.png",
     "Name": "Siya",
     "Surname": "Cabbarova",
-    "Age": 16,
     "Username": "siyacbrv",
+    "Age": 16,
     "PhoneNumber": "0555555555",
+    "Avatar": "\\Static Files\\Images\\MaleUserProfile.png",
     "MyWatchList": [
       {
         "Title": "Titanic",
@@ -634,5 +634,99 @@
     ],
     "Email": "jabbarovasia@gmail.com",
     "Password": "Siya123."
+  },
+  {
+    "Name": "Zeyneb",
+    "Surname": "Abdullazade",
+    "Username": "zeynab",
+    "Age": 18,
+    "PhoneNumber": "050-335-65-02",
+    "Avatar": "C:\\Users\\hasan\\Downloads\\WhatsApp Image 2023-07-25 at 12.28.19.jpg",
+    "MyWatchList": [
+      {
+        "Title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "Plot": "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb\u0027s rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible, inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea, but to plant one. If they succeed, it could be the perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming.",
+        "Language": "English, Japanese, French",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 4 Oscars. 159 wins \u0026 220 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "87%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "74/100"
+          }
+        ],
+        "Metascore": "74",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,425,956",
+        "imdbID": "tt1375666",
+        "Type": "movie",
+        "DVD": "20 Jun 2013",
+        "BoxOffice": "$292,587,330",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "HistoryList": [
+      {
+        "Title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "Plot": "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb\u0027s rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible, inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea, but to plant one. If they succeed, it could be the perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming.",
+        "Language": "English, Japanese, French",
+        "Country": "United States, United Kingdom",
+        "Awards": "Won 4 Oscars. 159 wins \u0026 220 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "87%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "74/100"
+          }
+        ],
+        "Metascore": "74",
+        "imdbRating": "8.8",
+        "imdbVotes": "2,425,956",
+        "imdbID": "tt1375666",
+        "Type": "movie",
+        "DVD": "20 Jun 2013",
+        "BoxOffice": "$292,587,330",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "Email": "hasanabdullazad@gmail.com",
+    "Password": "2000Zeynab"
   }
 ]
